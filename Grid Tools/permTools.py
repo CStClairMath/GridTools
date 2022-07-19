@@ -7,13 +7,13 @@
 #as well as being more familiar to the traditional definition of permutation groups Sn
 #***********************************************************************
 
-import copy
+import numpy as np
 import sys
-import math
+import copy
 
 class perm: #takes a list of integers and makes it a permutation type with standard permutation
             #group operation. Will copy argument if given a perm instead of a list datatype.
-        
+
     def __init__(self, lst = [1]): #initialization just loads the list into the self.value
         check_if_valid(lst)
         if type(lst) == perm:
@@ -23,16 +23,16 @@ class perm: #takes a list of integers and makes it a permutation type with stand
 
     def __str__(self):
         return str(self.value)
-            
+
     def __repr__(self):
         return str(self.value)
 
     def __getitem__(self, i):
         return self.value[i-1]
-    
+
     def __setitem__(self, i, val):
         self.value[i-1] = val
-    
+
     def __mul__(self, other): #self o other as permutation composition, also loads this into the * notation so sig*phi works
         temp_sig = self.value.copy()
         temp_phi = other.value.copy()
@@ -42,10 +42,10 @@ class perm: #takes a list of integers and makes it a permutation type with stand
         for i in range(n):
             result[i] = temp_sig[temp_phi[i]-1]
         return perm(result)
-    
+
     def __len__(self):
         return len(self.value)
-    
+
     def __eq__(self, other): #lets us compare permutations
         if type(other) != perm:
             return False
@@ -57,13 +57,13 @@ class perm: #takes a list of integers and makes it a permutation type with stand
     def copy(self):
         newCopy = perm(self.value)
         return newCopy
-        
-    def inverse(self): #Finding sig^-1 
+
+    def inverse(self): #Finding sig^-1
         result = identity_perm(len(self.value))
         for i in range(1,len(self.value)+1):
             result[self[i]] = i
         return result
-        
+
     def __pow__(self, n): #computes sig**n and loads it into the ** notation
         temp_sig, temp_id = match_sizes(self.value.copy(), [1])
         result = perm(temp_id)
@@ -79,7 +79,7 @@ class perm: #takes a list of integers and makes it a permutation type with stand
 
     def size(self):
         return len(self.value)
-    
+
     def cycles(self):         #returns a tuple of tuples representing the cycle notation for
         cycle_collection = [] #the given permutation for example [2, 1, 3, 5, 6, 4] --> ((1, 2)(3)(4,5,6)
         counted = []
@@ -93,7 +93,7 @@ class perm: #takes a list of integers and makes it a permutation type with stand
             if len(current_cycle) > 0:
                 cycle_collection.append(tuple(current_cycle))
         return tuple(cycle_collection)
-    
+
     def reduce_at(self, position): #removes an element that maps to itself and renumbers the permutation so its consistent
         if self.value[position - 1] == position:
             result = []
@@ -105,7 +105,7 @@ class perm: #takes a list of integers and makes it a permutation type with stand
             return perm(result)
         else:
             raise ValueError("Cannot reduce at given value - given value is not fixed under the permutation")
-                    
+
     def collapse_at(self, position): #pass this function the i s.t. you want to remove sigma(i)
         original_value = self.value[position - 1]
         result = []
@@ -116,7 +116,7 @@ class perm: #takes a list of integers and makes it a permutation type with stand
             elif x > original_value:
                 result.append(x - 1)
         return perm(result)
-    
+
     def widen_at(self, position = 1, value = 1):  #inverse of the reduce function - widens a permutation by adding i -> i in
         reference = self.value.copy()  #the middle of a permutation and renumbers the inputs and outputs that are
         size = len(reference)+1        # larger than i accordingly.
@@ -132,7 +132,7 @@ class perm: #takes a list of integers and makes it a permutation type with stand
                 if reference[i-1] < value:
                     result.append(reference[i-1])
                 else:
-                    result.append(reference[i-1]+1)                
+                    result.append(reference[i-1]+1)
             else:
                 result.append(value)
         return perm(result)
@@ -172,11 +172,11 @@ def match_sizes(sigma, phi): #extends the sigma and phi as necessary, adding ele
 def check_if_valid(sig): #Running collection of possible errors for given permutation arguments
     if not ((type(sig) == list) or (type(sig) == perm)): #checks if sig is a list or a perm type and raises a warning if not
         raise ValueError("Neither list nor perm passed to function")
-        
+
 def transposition(x, y, n = 2): #Permutation of [1,2 ... y ... x ... n] just swapping x and y
     temp_list = []
     for i in range(n):
-        temp_list.append(i+1)  
+        temp_list.append(i+1)
     temp_list[x-1] = y
     temp_list[y-1] = x
     return perm(temp_list)
@@ -204,7 +204,7 @@ def generate_sn(n):
     for x in range(1,n+1):
         temp_list.append([x])
     for i in range(n-1):
-#        print(i)
+        print(i)
         for z in range(1,n+1):
             for x in temp_list:
                 if z not in x:
@@ -218,7 +218,7 @@ def generate_sn(n):
         result.append(perm(entry))
     return result
 
-        
+
 def full_cycle(n): #permutation of [1, 2, 3, ... n]
     result = []
     for i in range(n-1):
@@ -242,4 +242,3 @@ def perm_from_cycle(cycle, given_size = -1): #takes a TUPLE of TUPLES so make su
         for i in range(len(sub_cycle)):
             temp_sig[sub_cycle[i-1]-1] = sub_cycle[i]
     return perm(temp_sig)
-

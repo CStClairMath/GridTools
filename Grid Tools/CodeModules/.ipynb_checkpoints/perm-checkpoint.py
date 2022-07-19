@@ -1,3 +1,12 @@
+#Author: Christopher St. Clair - Mathematics PhD Student at Michigan State University
+#***********************************************************************
+#email questions or comments to stclai ~ twenty two ~ at ~ msu dot edu
+#***********************************************************************
+#Adds the perm object type to work with mathematical permutation objects. Differs from lists
+#and some other permutation implementations by indexing from 1 which eases some computations
+#as well as being more familiar to the traditional definition of permutation groups Sn
+#***********************************************************************
+
 import copy
 import sys
 import math
