@@ -200,72 +200,32 @@ graph [
   edge [
     source 0
     target 42
-    diffweight "U4"
+    diffweight "U0"
   ]
   edge [
     source 0
     target 39
-    diffweight "U1"
-  ]
-  edge [
-    source 0
-    target 30
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 0
     target 10
-    diffweight "U3"
-  ]
-  edge [
-    source 1
-    target 32
-    diffweight "V0"
-  ]
-  edge [
-    source 1
-    target 46
-    diffweight "V0"
-  ]
-  edge [
-    source 1
-    target 29
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 1
     target 11
-    diffweight "U3"
-  ]
-  edge [
-    source 1
-    target 36
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 2
     target 28
-    diffweight "U1"
-  ]
-  edge [
-    source 2
-    target 27
-    diffweight "V0"
-  ]
-  edge [
-    source 2
-    target 37
-    diffweight "V0"
-  ]
-  edge [
-    source 2
-    target 44
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 2
     target 32
-    diffweight "U4"
+    diffweight "U0"
   ]
   edge [
     source 2
@@ -274,68 +234,38 @@ graph [
   ]
   edge [
     source 2
-    target 42
-    diffweight "V0"
-  ]
-  edge [
-    source 2
     target 8
-    diffweight "U1"
-  ]
-  edge [
-    source 2
-    target 9
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 2
     target 7
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 2
     target 29
-    diffweight "U1"
-  ]
-  edge [
-    source 2
-    target 10
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 2
     target 33
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 2
     target 36
-    diffweight "U1"
-  ]
-  edge [
-    source 2
-    target 39
-    diffweight "V0"
-  ]
-  edge [
-    source 3
-    target 9
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 3
     target 36
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 3
     target 7
-    diffweight "U1"
-  ]
-  edge [
-    source 3
-    target 16
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 3
@@ -344,98 +274,38 @@ graph [
   ]
   edge [
     source 3
-    target 42
-    diffweight "V0"
-  ]
-  edge [
-    source 3
     target 8
-    diffweight "U1"
-  ]
-  edge [
-    source 3
-    target 10
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 3
     target 28
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 3
     target 33
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 3
     target 29
-    diffweight "U1"
-  ]
-  edge [
-    source 3
-    target 37
-    diffweight "V0"
-  ]
-  edge [
-    source 3
-    target 39
-    diffweight "V0"
-  ]
-  edge [
-    source 3
-    target 27
-    diffweight "V0"
-  ]
-  edge [
-    source 3
-    target 43
-    diffweight "V0"
-  ]
-  edge [
-    source 4
-    target 17
-    diffweight "V0"
-  ]
-  edge [
-    source 4
-    target 31
-    diffweight "V0"
-  ]
-  edge [
-    source 4
-    target 36
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 4
     target 11
-    diffweight "U2"
-  ]
-  edge [
-    source 4
-    target 8
-    diffweight "V0"
-  ]
-  edge [
-    source 5
-    target 19
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 5
     target 31
-    diffweight "U4"
+    diffweight "U0"
   ]
   edge [
     source 5
     target 33
-    diffweight "U1"
-  ]
-  edge [
-    source 5
-    target 10
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 5
@@ -444,128 +314,53 @@ graph [
   ]
   edge [
     source 5
-    target 42
-    diffweight "V0"
-  ]
-  edge [
-    source 5
     target 8
-    diffweight "U1"
-  ]
-  edge [
-    source 5
-    target 9
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 5
     target 7
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 5
     target 29
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 5
     target 28
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 5
     target 36
-    diffweight "U1"
-  ]
-  edge [
-    source 5
-    target 37
-    diffweight "V0"
-  ]
-  edge [
-    source 5
-    target 39
-    diffweight "V0"
-  ]
-  edge [
-    source 5
-    target 27
-    diffweight "V0"
-  ]
-  edge [
-    source 5
-    target 43
-    diffweight "V0"
-  ]
-  edge [
-    source 6
-    target 46
-    diffweight "V0"
-  ]
-  edge [
-    source 6
-    target 18
-    diffweight "V0"
-  ]
-  edge [
-    source 6
-    target 8
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 6
     target 11
-    diffweight "U1"
-  ]
-  edge [
-    source 6
-    target 33
-    diffweight "V0"
-  ]
-  edge [
-    source 7
-    target 12
-    diffweight "V0"
-  ]
-  edge [
-    source 7
-    target 20
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 7
     target 1
-    diffweight "U2"
-  ]
-  edge [
-    source 7
-    target 3
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 7
     target 4
-    diffweight "U4"
-  ]
-  edge [
-    source 7
-    target 5
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 7
     target 6
-    diffweight "U2"
-  ]
-  edge [
-    source 7
-    target 40
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 7
     target 14
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 7
@@ -573,54 +368,14 @@ graph [
     diffweight "U0"
   ]
   edge [
-    source 7
-    target 35
-    diffweight "V0"
-  ]
-  edge [
-    source 7
-    target 23
-    diffweight "V0"
-  ]
-  edge [
-    source 8
-    target 15
-    diffweight "V0"
-  ]
-  edge [
     source 8
     target 6
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 8
     target 4
-    diffweight "U4"
-  ]
-  edge [
-    source 8
-    target 3
-    diffweight "V0"
-  ]
-  edge [
-    source 8
-    target 5
-    diffweight "V0"
-  ]
-  edge [
-    source 8
-    target 20
-    diffweight "V0"
-  ]
-  edge [
-    source 8
-    target 40
-    diffweight "V0"
-  ]
-  edge [
-    source 8
-    target 38
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 9
@@ -629,18 +384,8 @@ graph [
   ]
   edge [
     source 9
-    target 13
-    diffweight "V0"
-  ]
-  edge [
-    source 9
-    target 21
-    diffweight "V0"
-  ]
-  edge [
-    source 9
     target 15
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 9
@@ -650,37 +395,27 @@ graph [
   edge [
     source 9
     target 35
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 9
     target 23
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 9
     target 5
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 10
     target 15
-    diffweight "U4"
-  ]
-  edge [
-    source 10
-    target 21
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 10
     target 5
-    diffweight "U1"
-  ]
-  edge [
-    source 10
-    target 0
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 10
@@ -690,7 +425,7 @@ graph [
   edge [
     source 10
     target 40
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 10
@@ -703,54 +438,19 @@ graph [
     diffweight "U0"
   ]
   edge [
-    source 11
-    target 4
-    diffweight "V0"
-  ]
-  edge [
-    source 11
-    target 1
-    diffweight "V0"
-  ]
-  edge [
-    source 11
-    target 22
-    diffweight "V0"
-  ]
-  edge [
-    source 11
-    target 14
-    diffweight "V0"
-  ]
-  edge [
-    source 11
-    target 6
-    diffweight "V0"
-  ]
-  edge [
-    source 12
-    target 41
-    diffweight "V0"
-  ]
-  edge [
     source 12
     target 32
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 12
     target 7
-    diffweight "U1"
-  ]
-  edge [
-    source 12
-    target 27
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 12
     target 29
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 12
@@ -759,93 +459,43 @@ graph [
   ]
   edge [
     source 12
-    target 42
-    diffweight "V0"
-  ]
-  edge [
-    source 12
     target 8
-    diffweight "U1"
-  ]
-  edge [
-    source 12
-    target 9
-    diffweight "V0"
-  ]
-  edge [
-    source 12
-    target 10
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 12
     target 28
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 12
     target 33
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 12
     target 36
-    diffweight "U1"
-  ]
-  edge [
-    source 12
-    target 37
-    diffweight "V0"
-  ]
-  edge [
-    source 12
-    target 39
-    diffweight "V0"
-  ]
-  edge [
-    source 12
-    target 43
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 13
     target 41
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 13
     target 42
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 13
     target 9
-    diffweight "U3"
-  ]
-  edge [
-    source 13
-    target 30
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 13
     target 43
     diffweight "U0"
-  ]
-  edge [
-    source 14
-    target 31
-    diffweight "V0"
-  ]
-  edge [
-    source 14
-    target 32
-    diffweight "V0"
-  ]
-  edge [
-    source 14
-    target 33
-    diffweight "V0"
   ]
   edge [
     source 14
@@ -853,29 +503,14 @@ graph [
     diffweight "U0"
   ]
   edge [
-    source 14
-    target 28
-    diffweight "V0"
-  ]
-  edge [
     source 15
     target 8
-    diffweight "U1"
-  ]
-  edge [
-    source 15
-    target 10
-    diffweight "V0"
-  ]
-  edge [
-    source 15
-    target 42
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 15
     target 31
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 15
@@ -884,153 +519,73 @@ graph [
   ]
   edge [
     source 15
-    target 9
-    diffweight "V0"
-  ]
-  edge [
-    source 15
     target 33
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 15
     target 7
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 15
     target 29
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 15
     target 28
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 15
     target 36
-    diffweight "U1"
-  ]
-  edge [
-    source 15
-    target 37
-    diffweight "V0"
-  ]
-  edge [
-    source 15
-    target 39
-    diffweight "V0"
-  ]
-  edge [
-    source 15
-    target 27
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 16
     target 38
-    diffweight "U4"
-  ]
-  edge [
-    source 16
-    target 21
-    diffweight "V0"
-  ]
-  edge [
-    source 16
-    target 24
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 16
     target 20
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 16
     target 47
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 16
     target 3
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 16
     target 25
-    diffweight "U2"
-  ]
-  edge [
-    source 17
-    target 35
-    diffweight "V0"
-  ]
-  edge [
-    source 17
-    target 38
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 17
     target 22
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 17
     target 4
-    diffweight "U4"
-  ]
-  edge [
-    source 17
-    target 23
-    diffweight "V0"
-  ]
-  edge [
-    source 17
-    target 20
-    diffweight "V0"
-  ]
-  edge [
-    source 17
-    target 40
-    diffweight "V0"
-  ]
-  edge [
-    source 18
-    target 47
-    diffweight "V0"
-  ]
-  edge [
-    source 18
-    target 25
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 18
     target 6
-    diffweight "U4"
+    diffweight "U0"
   ]
   edge [
     source 18
     target 22
-    diffweight "U1"
-  ]
-  edge [
-    source 18
-    target 40
-    diffweight "V0"
-  ]
-  edge [
-    source 18
-    target 20
-    diffweight "V0"
-  ]
-  edge [
-    source 18
-    target 38
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 19
@@ -1040,72 +595,47 @@ graph [
   edge [
     source 19
     target 5
-    diffweight "U4"
-  ]
-  edge [
-    source 19
-    target 21
-    diffweight "V0"
-  ]
-  edge [
-    source 19
-    target 26
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 19
     target 40
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 19
     target 35
-    diffweight "U4"
+    diffweight "U0"
   ]
   edge [
     source 19
     target 23
-    diffweight "U4"
-  ]
-  edge [
-    source 20
-    target 19
-    diffweight "V0"
-  ]
-  edge [
-    source 20
-    target 27
-    diffweight "V0"
-  ]
-  edge [
-    source 20
-    target 16
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 20
     target 7
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 20
     target 17
-    diffweight "U4"
+    diffweight "U0"
   ]
   edge [
     source 20
     target 18
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 20
     target 29
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 20
     target 28
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 21
@@ -1115,67 +645,32 @@ graph [
   edge [
     source 21
     target 19
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 21
     target 10
-    diffweight "U2"
-  ]
-  edge [
-    source 21
-    target 30
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 21
     target 9
-    diffweight "U4"
-  ]
-  edge [
-    source 22
-    target 17
-    diffweight "V0"
-  ]
-  edge [
-    source 22
-    target 18
-    diffweight "V0"
-  ]
-  edge [
-    source 22
-    target 28
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 22
     target 11
-    diffweight "U4"
-  ]
-  edge [
-    source 22
-    target 29
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 23
     target 29
-    diffweight "U1"
-  ]
-  edge [
-    source 23
-    target 43
-    diffweight "V0"
-  ]
-  edge [
-    source 23
-    target 41
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 23
     target 17
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 23
@@ -1184,103 +679,58 @@ graph [
   ]
   edge [
     source 23
-    target 42
-    diffweight "V0"
-  ]
-  edge [
-    source 23
     target 8
-    diffweight "U1"
-  ]
-  edge [
-    source 23
-    target 9
-    diffweight "V0"
-  ]
-  edge [
-    source 23
-    target 10
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 23
     target 28
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 23
     target 33
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 23
     target 36
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 23
     target 7
-    diffweight "U1"
-  ]
-  edge [
-    source 23
-    target 37
-    diffweight "V0"
-  ]
-  edge [
-    source 23
-    target 39
-    diffweight "V0"
-  ]
-  edge [
-    source 23
-    target 27
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 24
     target 44
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 24
     target 16
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 24
     target 43
-    diffweight "U4"
-  ]
-  edge [
-    source 24
-    target 30
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 24
     target 27
-    diffweight "U1"
-  ]
-  edge [
-    source 25
-    target 44
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 25
     target 18
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 25
     target 28
-    diffweight "U1"
-  ]
-  edge [
-    source 25
-    target 39
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 25
@@ -1289,63 +739,38 @@ graph [
   ]
   edge [
     source 25
-    target 42
-    diffweight "V0"
-  ]
-  edge [
-    source 25
     target 8
-    diffweight "U1"
-  ]
-  edge [
-    source 25
-    target 9
-    diffweight "V0"
-  ]
-  edge [
-    source 25
-    target 10
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 25
     target 33
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 25
     target 36
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 25
     target 29
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 25
     target 7
-    diffweight "U1"
-  ]
-  edge [
-    source 25
-    target 37
-    diffweight "V0"
-  ]
-  edge [
-    source 25
-    target 27
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 26
     target 19
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 26
     target 41
-    diffweight "U4"
+    diffweight "U0"
   ]
   edge [
     source 26
@@ -1354,58 +779,33 @@ graph [
   ]
   edge [
     source 26
-    target 30
-    diffweight "V0"
-  ]
-  edge [
-    source 26
     target 39
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 27
     target 20
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 27
     target 2
-    diffweight "U2"
-  ]
-  edge [
-    source 27
-    target 26
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 27
     target 12
-    diffweight "U4"
-  ]
-  edge [
-    source 27
-    target 24
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 27
     target 23
-    diffweight "U4"
+    diffweight "U0"
   ]
   edge [
     source 27
     target 25
-    diffweight "U2"
-  ]
-  edge [
-    source 28
-    target 35
-    diffweight "V0"
-  ]
-  edge [
-    source 28
-    target 2
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 28
@@ -1414,58 +814,18 @@ graph [
   ]
   edge [
     source 28
-    target 25
-    diffweight "V0"
-  ]
-  edge [
-    source 28
     target 14
-    diffweight "U2"
-  ]
-  edge [
-    source 28
-    target 40
-    diffweight "V0"
-  ]
-  edge [
-    source 28
-    target 12
-    diffweight "V0"
-  ]
-  edge [
-    source 29
-    target 23
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 29
     target 1
-    diffweight "U4"
-  ]
-  edge [
-    source 29
-    target 12
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 29
     target 22
-    diffweight "U1"
-  ]
-  edge [
-    source 29
-    target 47
-    diffweight "V0"
-  ]
-  edge [
-    source 29
-    target 2
-    diffweight "V0"
-  ]
-  edge [
-    source 29
-    target 38
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 30
@@ -1475,32 +835,27 @@ graph [
   edge [
     source 30
     target 26
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 30
     target 0
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 30
     target 21
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 30
     target 13
-    diffweight "U4"
-  ]
-  edge [
-    source 31
-    target 5
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 31
     target 14
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 31
@@ -1508,34 +863,9 @@ graph [
     diffweight "U0"
   ]
   edge [
-    source 31
-    target 34
-    diffweight "V0"
-  ]
-  edge [
-    source 31
-    target 35
-    diffweight "V0"
-  ]
-  edge [
-    source 31
-    target 15
-    diffweight "V0"
-  ]
-  edge [
-    source 32
-    target 34
-    diffweight "V0"
-  ]
-  edge [
-    source 32
-    target 12
-    diffweight "V0"
-  ]
-  edge [
     source 32
     target 14
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 32
@@ -1543,114 +873,29 @@ graph [
     diffweight "U0"
   ]
   edge [
-    source 32
-    target 45
-    diffweight "V0"
-  ]
-  edge [
-    source 32
-    target 2
-    diffweight "V0"
-  ]
-  edge [
-    source 33
-    target 40
-    diffweight "V0"
-  ]
-  edge [
     source 33
     target 14
-    diffweight "U1"
-  ]
-  edge [
-    source 33
-    target 5
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 33
     target 6
-    diffweight "U3"
-  ]
-  edge [
-    source 33
-    target 45
-    diffweight "V0"
-  ]
-  edge [
-    source 33
-    target 15
-    diffweight "V0"
-  ]
-  edge [
-    source 33
-    target 25
-    diffweight "V0"
-  ]
-  edge [
-    source 33
-    target 2
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 34
     target 32
-    diffweight "U2"
-  ]
-  edge [
-    source 34
-    target 41
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 34
     target 31
-    diffweight "U1"
-  ]
-  edge [
-    source 34
-    target 42
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 34
     target 36
     diffweight "U0"
-  ]
-  edge [
-    source 34
-    target 37
-    diffweight "V0"
-  ]
-  edge [
-    source 34
-    target 10
-    diffweight "V0"
-  ]
-  edge [
-    source 34
-    target 39
-    diffweight "V0"
-  ]
-  edge [
-    source 34
-    target 27
-    diffweight "V0"
-  ]
-  edge [
-    source 34
-    target 43
-    diffweight "V0"
-  ]
-  edge [
-    source 34
-    target 9
-    diffweight "V0"
-  ]
-  edge [
-    source 35
-    target 37
-    diffweight "V0"
   ]
   edge [
     source 35
@@ -1660,47 +905,17 @@ graph [
   edge [
     source 35
     target 28
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 35
     target 31
-    diffweight "U2"
-  ]
-  edge [
-    source 35
-    target 19
-    diffweight "V0"
-  ]
-  edge [
-    source 35
-    target 41
-    diffweight "V0"
-  ]
-  edge [
-    source 35
-    target 39
-    diffweight "V0"
-  ]
-  edge [
-    source 35
-    target 27
-    diffweight "V0"
-  ]
-  edge [
-    source 36
-    target 3
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 36
     target 4
-    diffweight "U3"
-  ]
-  edge [
-    source 36
-    target 38
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 36
@@ -1708,29 +923,14 @@ graph [
     diffweight "U0"
   ]
   edge [
-    source 36
-    target 34
-    diffweight "V0"
-  ]
-  edge [
-    source 36
-    target 23
-    diffweight "V0"
-  ]
-  edge [
     source 37
     target 35
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 37
     target 38
     diffweight "U0"
-  ]
-  edge [
-    source 37
-    target 24
-    diffweight "V0"
   ]
   edge [
     source 37
@@ -1740,62 +940,27 @@ graph [
   edge [
     source 37
     target 34
-    diffweight "U4"
-  ]
-  edge [
-    source 37
-    target 26
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 37
     target 5
-    diffweight "U3"
-  ]
-  edge [
-    source 37
-    target 0
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 37
     target 15
-    diffweight "U2"
-  ]
-  edge [
-    source 37
-    target 21
-    diffweight "V0"
-  ]
-  edge [
-    source 37
-    target 13
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 38
     target 17
-    diffweight "U1"
-  ]
-  edge [
-    source 38
-    target 37
-    diffweight "V0"
-  ]
-  edge [
-    source 38
-    target 16
-    diffweight "V0"
-  ]
-  edge [
-    source 38
-    target 43
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 38
     target 36
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 38
@@ -1804,63 +969,33 @@ graph [
   ]
   edge [
     source 38
-    target 42
-    diffweight "V0"
-  ]
-  edge [
-    source 38
     target 8
-    diffweight "U1"
-  ]
-  edge [
-    source 38
-    target 9
-    diffweight "V0"
-  ]
-  edge [
-    source 38
-    target 10
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 38
     target 33
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 38
     target 7
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 38
     target 29
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 38
     target 28
-    diffweight "U1"
-  ]
-  edge [
-    source 38
-    target 39
-    diffweight "V0"
-  ]
-  edge [
-    source 38
-    target 27
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 39
     target 40
-    diffweight "U3"
-  ]
-  edge [
-    source 39
-    target 0
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 39
@@ -1869,13 +1004,8 @@ graph [
   ]
   edge [
     source 39
-    target 26
-    diffweight "V0"
-  ]
-  edge [
-    source 39
     target 34
-    diffweight "U4"
+    diffweight "U0"
   ]
   edge [
     source 39
@@ -1885,27 +1015,22 @@ graph [
   edge [
     source 39
     target 5
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 39
     target 15
-    diffweight "U4"
+    diffweight "U0"
   ]
   edge [
     source 39
     target 12
-    diffweight "U4"
+    diffweight "U0"
   ]
   edge [
     source 40
     target 33
-    diffweight "U1"
-  ]
-  edge [
-    source 40
-    target 39
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 40
@@ -1914,108 +1039,63 @@ graph [
   ]
   edge [
     source 40
-    target 19
-    diffweight "V0"
-  ]
-  edge [
-    source 40
     target 46
     diffweight "U0"
   ]
   edge [
     source 40
-    target 42
-    diffweight "V0"
-  ]
-  edge [
-    source 40
     target 8
-    diffweight "U1"
-  ]
-  edge [
-    source 40
-    target 9
-    diffweight "V0"
-  ]
-  edge [
-    source 40
-    target 10
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 40
     target 28
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 40
     target 36
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 40
     target 29
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 40
     target 7
-    diffweight "U1"
-  ]
-  edge [
-    source 40
-    target 37
-    diffweight "V0"
-  ]
-  edge [
-    source 40
-    target 27
-    diffweight "V0"
-  ]
-  edge [
-    source 40
-    target 43
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 41
     target 34
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 41
     target 12
-    diffweight "U2"
-  ]
-  edge [
-    source 41
-    target 13
-    diffweight "V0"
-  ]
-  edge [
-    source 41
-    target 26
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 41
     target 23
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 41
     target 35
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 41
     target 5
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 41
     target 15
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 42
@@ -2024,237 +1104,132 @@ graph [
   ]
   edge [
     source 42
-    target 13
-    diffweight "V0"
-  ]
-  edge [
-    source 42
-    target 0
-    diffweight "V0"
-  ]
-  edge [
-    source 42
     target 34
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 42
     target 15
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 42
     target 12
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 43
     target 23
-    diffweight "U1"
-  ]
-  edge [
-    source 43
-    target 24
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 43
     target 38
-    diffweight "U3"
-  ]
-  edge [
-    source 43
-    target 13
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 43
     target 45
-    diffweight "U2"
+    diffweight "U0"
   ]
   edge [
     source 43
     target 3
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 43
     target 12
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 44
     target 47
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 44
     target 25
-    diffweight "U3"
-  ]
-  edge [
-    source 44
-    target 0
-    diffweight "V0"
-  ]
-  edge [
-    source 44
-    target 24
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 44
     target 45
-    diffweight "U4"
+    diffweight "U0"
   ]
   edge [
     source 44
     target 2
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 44
     target 3
-    diffweight "U3"
-  ]
-  edge [
-    source 45
-    target 42
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 45
     target 46
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 45
     target 32
-    diffweight "U1"
-  ]
-  edge [
-    source 45
-    target 44
-    diffweight "V0"
-  ]
-  edge [
-    source 45
-    target 43
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 45
     target 33
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 45
     target 8
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 45
     target 7
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 45
     target 29
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 45
     target 28
-    diffweight "U1"
+    diffweight "U0"
   ]
   edge [
     source 45
     target 36
-    diffweight "U1"
-  ]
-  edge [
-    source 46
-    target 45
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 46
     target 6
-    diffweight "U3"
+    diffweight "U0"
   ]
   edge [
     source 46
     target 1
-    diffweight "U1"
-  ]
-  edge [
-    source 46
-    target 47
-    diffweight "V0"
-  ]
-  edge [
-    source 46
-    target 3
-    diffweight "V0"
-  ]
-  edge [
-    source 46
-    target 2
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 47
     target 18
-    diffweight "U3"
-  ]
-  edge [
-    source 47
-    target 44
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 47
     target 46
-    diffweight "U2"
-  ]
-  edge [
-    source 47
-    target 16
-    diffweight "V0"
+    diffweight "U0"
   ]
   edge [
     source 47
     target 29
-    diffweight "U1"
-  ]
-  edge [
-    source 47
-    target 9
-    diffweight "V0"
-  ]
-  edge [
-    source 47
-    target 10
-    diffweight "V0"
-  ]
-  edge [
-    source 47
-    target 37
-    diffweight "V0"
-  ]
-  edge [
-    source 47
-    target 39
-    diffweight "V0"
-  ]
-  edge [
-    source 47
-    target 27
-    diffweight "V0"
-  ]
-  edge [
-    source 47
-    target 43
-    diffweight "V0"
+    diffweight "U0"
   ]
 ]
