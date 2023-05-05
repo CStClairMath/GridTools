@@ -80,7 +80,8 @@ class perm: #takes a list of integers and makes it a permutation type with stand
     def size(self):
         return len(self.value)
     
-    def cycles(self):         #returns a tuple of tuples representing the cycle notation for
+    def cycles(self):         
+        #returns a tuple of tuples representing the cycle notation for
         cycle_collection = [] #the given permutation for example [2, 1, 3, 5, 6, 4] --> ((1, 2)(3)(4,5,6)
         counted = []
         for x in range(self.size()):
@@ -160,19 +161,24 @@ def extend_perm(sig, n, isPerm = False): #Extends a permutation to length n - wi
     else:
         return extend_perm(sig.value, n, True)
 
-def match_sizes(sigma, phi): #extends the sigma and phi as necessary, adding elements mapping to themselves
-    check_if_valid(sigma)    #accepts lists and perms returning the same type as given
+def match_sizes(sigma, phi): 
+    #extends the sigma and phi as necessary, adding elements mapping to themselves
+    #accepts lists and perms returning the same type as given
+    check_if_valid(sigma)    
     check_if_valid(phi)
     new_sigma = perm(sigma)
     new_phi = perm(phi)
     fin_sigma = extend_perm(new_sigma, len(phi))
     fin_phi = extend_perm(new_phi, len(sigma))
+    
     return (type(sigma)(fin_sigma.value), type(phi)(fin_phi.value))
 
 def check_if_valid(sig): #Running collection of possible errors for given permutation arguments
     if not ((type(sig) == list) or (type(sig) == perm)): #checks if sig is a list or a perm type and raises a warning if not
         raise ValueError("Neither list nor perm passed to function")
-        
+    return
+    
+    
 def transposition(x, y, n = 2): #Permutation of [1,2 ... y ... x ... n] just swapping x and y
     temp_list = []
     for i in range(n):
