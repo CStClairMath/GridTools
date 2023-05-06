@@ -1,7 +1,7 @@
 import sys
 import pickle
 import time
-from CodeModules.perm import *
+from .perm import *
 import networkx as nx
 
 
@@ -447,6 +447,28 @@ def pickle_it(comp, filename):
     
     return
 
+def build_cinf(symbols):
+    
+    #Input: symbols a list of two lists, [sigx, sigo]
+    #
+    #Output: g a networkx directed graph
+        
+    xlist = symbols[0]
+    olist = symbols[1]
+    size = len(xlist)
+
+#     if type(symbols) == grid:
+        
+#         xlist = symbols.sig_x
+#         olist = symbols.sig_o    
+    
+    comp = generate_all_edges(size, [xlist,olist])
+    g = nx.DiGraph()
+    for ele in comp:
+        
+        g.add_edge(str(ele[0][0]),str(ele[0][1]), diffweight = (ele[2][0] + ele[2][1]))
+    
+    return g
 
 
 def pickle_cinf(gknot, filename = 'DefaultPickleComp'):
@@ -479,7 +501,7 @@ def pickle_cinf(gknot, filename = 'DefaultPickleComp'):
         
         g.add_edge(str(ele[0][0]),str(ele[0][1]), diffweight = (ele[2][0] + ele[2][1]))
         
-    pickle_it((g, size), filename)
+    pickle_it((g, size, gknot), filename)
     
     return
 
@@ -596,12 +618,12 @@ def prompt_for_link():
 #Function call if ran as script
 ###############################################################################
 
-def main():
+# def main():
     
-    user_syms = prompt_for_link()
-    fname = str(input('What would you like the pickle (output) to be named: '))
-    pickle_cinf(user_syms, fname)
+#     user_syms = prompt_for_link()
+#     fname = str(input('What would you like the pickle (output) to be named: '))
+#     pickle_cinf(user_syms, fname)
     
-if __name__ == '__main__':
+# if __name__ == '__main__':
     
-    main()
+#     main()
