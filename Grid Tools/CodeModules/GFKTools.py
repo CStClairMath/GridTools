@@ -464,9 +464,14 @@ def build_cinf(symbols):
     
     comp = generate_all_edges(size, [xlist,olist])
     g = nx.DiGraph()
+#     nx.set_edge_attributes(g, {'diffweight':[]})
     for ele in comp:
         
-        g.add_edge(str(ele[0][0]),str(ele[0][1]), diffweight = (ele[2][0] + ele[2][1]))
+        if not g.has_edge(str(ele[0][0]),str(ele[0][1])):
+
+            g.add_edge(str(ele[0][0]),str(ele[0][1]), diffweight = [])
+            
+        g[str(ele[0][0])][str(ele[0][1])]['diffweight'].append((ele[2][0] + ele[2][1]))
     
     return g
 
