@@ -4,17 +4,17 @@ graph [
     id 0
     label "[5, 1, 3, 2, 4]"
     HasBeenGraded 1
-    UGrading -4
-    VGrading 4
-    AGrading -4
+    UGrading -2
+    VGrading 2
+    AGrading -2
   ]
   node [
     id 1
     label "[2, 4, 3, 5, 1]"
     HasBeenGraded 1
-    UGrading 4
-    VGrading -4
-    AGrading 4
+    UGrading 2
+    VGrading -2
+    AGrading 2
   ]
   node [
     id 2
@@ -36,9 +36,9 @@ graph [
     id 4
     label "[3, 2, 4, 5, 1]"
     HasBeenGraded 1
-    UGrading 0
+    UGrading 2
     VGrading -2
-    AGrading 1
+    AGrading 2
   ]
   node [
     id 5
@@ -52,9 +52,9 @@ graph [
     id 6
     label "[1, 3, 4, 5, 2]"
     HasBeenGraded 1
-    UGrading 4
+    UGrading 2
     VGrading -2
-    AGrading 3
+    AGrading 2
   ]
   node [
     id 7
@@ -85,16 +85,16 @@ graph [
     label "[5, 1, 4, 2, 3]"
     HasBeenGraded 1
     UGrading -1
-    VGrading 3
-    AGrading -2
+    VGrading 1
+    AGrading -1
   ]
   node [
     id 11
     label "[2, 3, 4, 5, 1]"
     HasBeenGraded 1
-    UGrading 7
-    VGrading -5
-    AGrading 6
+    UGrading 3
+    VGrading -3
+    AGrading 3
   ]
   node [
     id 12
@@ -108,25 +108,25 @@ graph [
     id 13
     label "[4, 1, 2, 3, 5]"
     HasBeenGraded 1
-    UGrading -4
-    VGrading 6
-    AGrading -5
+    UGrading -2
+    VGrading 2
+    AGrading -2
   ]
   node [
     id 14
     label "[2, 3, 4, 1, 5]"
     HasBeenGraded 1
-    UGrading 4
+    UGrading 2
     VGrading -2
-    AGrading 3
+    AGrading 2
   ]
   node [
     id 15
     label "[3, 1, 4, 2, 5]"
     HasBeenGraded 1
     UGrading 0
-    VGrading 2
-    AGrading -1
+    VGrading 0
+    AGrading 0
   ]
   node [
     id 16
@@ -140,9 +140,9 @@ graph [
     id 17
     label "[3, 2, 5, 4, 1]"
     HasBeenGraded 1
-    UGrading -1
+    UGrading 1
     VGrading -1
-    AGrading 0
+    AGrading 1
   ]
   node [
     id 18
@@ -180,33 +180,33 @@ graph [
     id 22
     label "[2, 3, 5, 4, 1]"
     HasBeenGraded 1
-    UGrading 0
+    UGrading 2
     VGrading -2
-    AGrading 1
+    AGrading 2
   ]
   node [
     id 23
     label "[4, 2, 5, 3, 1]"
     HasBeenGraded 1
-    UGrading -2
+    UGrading 0
     VGrading 0
-    AGrading -1
+    AGrading 0
   ]
   node [
     id 24
     label "[1, 5, 2, 3, 4]"
     HasBeenGraded 1
-    UGrading -4
-    VGrading 6
-    AGrading -5
+    UGrading -2
+    VGrading 2
+    AGrading -2
   ]
   node [
     id 25
     label "[1, 3, 5, 2, 4]"
     HasBeenGraded 1
     UGrading 0
-    VGrading 2
-    AGrading -1
+    VGrading 0
+    AGrading 0
   ]
   node [
     id 26
@@ -236,17 +236,17 @@ graph [
     id 29
     label "[2, 4, 5, 3, 1]"
     HasBeenGraded 1
-    UGrading -1
+    UGrading 1
     VGrading -1
-    AGrading 0
+    AGrading 1
   ]
   node [
     id 30
     label "[5, 1, 2, 3, 4]"
     HasBeenGraded 1
-    UGrading -5
-    VGrading 7
-    AGrading -6
+    UGrading -3
+    VGrading 3
+    AGrading -3
   ]
   node [
     id 31
@@ -268,9 +268,9 @@ graph [
     id 33
     label "[5, 3, 4, 1, 2]"
     HasBeenGraded 1
-    UGrading 3
+    UGrading 1
     VGrading -1
-    AGrading 2
+    AGrading 1
   ]
   node [
     id 34
@@ -292,9 +292,9 @@ graph [
     id 36
     label "[3, 4, 2, 5, 1]"
     HasBeenGraded 1
-    UGrading -1
+    UGrading 1
     VGrading -1
-    AGrading 0
+    AGrading 1
   ]
   node [
     id 37
@@ -308,17 +308,17 @@ graph [
     id 38
     label "[3, 5, 2, 4, 1]"
     HasBeenGraded 1
-    UGrading -2
+    UGrading 0
     VGrading 0
-    AGrading -1
+    AGrading 0
   ]
   node [
     id 39
     label "[5, 3, 1, 2, 4]"
     HasBeenGraded 1
     UGrading -1
-    VGrading 3
-    AGrading -2
+    VGrading 1
+    AGrading -1
   ]
   node [
     id 40
@@ -340,25 +340,25 @@ graph [
     id 42
     label "[4, 1, 3, 2, 5]"
     HasBeenGraded 1
-    UGrading -3
-    VGrading 3
-    AGrading -3
+    UGrading -1
+    VGrading 1
+    AGrading -1
   ]
   node [
     id 43
     label "[4, 5, 2, 3, 1]"
     HasBeenGraded 1
     UGrading -1
-    VGrading 3
-    AGrading -2
+    VGrading 1
+    AGrading -1
   ]
   node [
     id 44
     label "[1, 5, 3, 2, 4]"
     HasBeenGraded 1
-    UGrading -3
-    VGrading 3
-    AGrading -3
+    UGrading -1
+    VGrading 1
+    AGrading -1
   ]
   node [
     id 45
@@ -401,11 +401,6 @@ graph [
   ]
   edge [
     source 0
-    target 30
-    diffweight "V0^2"
-  ]
-  edge [
-    source 0
     target 10
     diffweight "U0"
   ]
@@ -423,11 +418,6 @@ graph [
     source 1
     target 29
     diffweight "V0"
-  ]
-  edge [
-    source 1
-    target 11
-    diffweight "U0^2"
   ]
   edge [
     source 1
@@ -521,11 +511,6 @@ graph [
   ]
   edge [
     source 4
-    target 11
-    diffweight "U0^2"
-  ]
-  edge [
-    source 4
     target 8
     diffweight "V0"
   ]
@@ -606,11 +591,6 @@ graph [
   ]
   edge [
     source 6
-    target 11
-    diffweight "U0^2"
-  ]
-  edge [
-    source 6
     target 33
     diffweight "V0"
   ]
@@ -831,11 +811,6 @@ graph [
   ]
   edge [
     source 13
-    target 30
-    diffweight "V0^2"
-  ]
-  edge [
-    source 13
     target 43
     diffweight "U0"
   ]
@@ -853,11 +828,6 @@ graph [
     source 14
     target 33
     diffweight "V0"
-  ]
-  edge [
-    source 14
-    target 11
-    diffweight "U0^2"
   ]
   edge [
     source 14
@@ -901,16 +871,6 @@ graph [
   ]
   edge [
     source 16
-    target 21
-    diffweight "V0^2"
-  ]
-  edge [
-    source 16
-    target 24
-    diffweight "V0^2"
-  ]
-  edge [
-    source 16
     target 20
     diffweight "U0"
   ]
@@ -928,16 +888,6 @@ graph [
     source 17
     target 35
     diffweight "V0"
-  ]
-  edge [
-    source 17
-    target 22
-    diffweight "U0^2"
-  ]
-  edge [
-    source 17
-    target 4
-    diffweight "U0^2"
   ]
   edge [
     source 17
@@ -963,16 +913,6 @@ graph [
     source 18
     target 25
     diffweight "V0"
-  ]
-  edge [
-    source 18
-    target 6
-    diffweight "U0^2"
-  ]
-  edge [
-    source 18
-    target 22
-    diffweight "U0^2"
   ]
   edge [
     source 18
@@ -991,16 +931,6 @@ graph [
   ]
   edge [
     source 19
-    target 21
-    diffweight "V0^2"
-  ]
-  edge [
-    source 19
-    target 26
-    diffweight "V0^2"
-  ]
-  edge [
-    source 19
     target 40
     diffweight "U0"
   ]
@@ -1013,11 +943,6 @@ graph [
     source 19
     target 23
     diffweight "U0"
-  ]
-  edge [
-    source 20
-    target 27
-    diffweight "V0^2"
   ]
   edge [
     source 20
@@ -1056,11 +981,6 @@ graph [
   ]
   edge [
     source 21
-    target 30
-    diffweight "V0^2"
-  ]
-  edge [
-    source 21
     target 9
     diffweight "U0"
   ]
@@ -1078,11 +998,6 @@ graph [
     source 22
     target 28
     diffweight "V0"
-  ]
-  edge [
-    source 22
-    target 11
-    diffweight "U0^2"
   ]
   edge [
     source 22
@@ -1156,11 +1071,6 @@ graph [
   ]
   edge [
     source 24
-    target 30
-    diffweight "V0^2"
-  ]
-  edge [
-    source 24
     target 27
     diffweight "U0"
   ]
@@ -1218,11 +1128,6 @@ graph [
     source 26
     target 27
     diffweight "U0"
-  ]
-  edge [
-    source 26
-    target 30
-    diffweight "V0^2"
   ]
   edge [
     source 26
@@ -1336,16 +1241,6 @@ graph [
   ]
   edge [
     source 31
-    target 14
-    diffweight "U0^2"
-  ]
-  edge [
-    source 31
-    target 4
-    diffweight "U0^2"
-  ]
-  edge [
-    source 31
     target 34
     diffweight "V0"
   ]
@@ -1368,16 +1263,6 @@ graph [
     source 32
     target 12
     diffweight "V0"
-  ]
-  edge [
-    source 32
-    target 14
-    diffweight "U0^2"
-  ]
-  edge [
-    source 32
-    target 1
-    diffweight "U0^2"
   ]
   edge [
     source 32
@@ -1426,11 +1311,6 @@ graph [
   ]
   edge [
     source 34
-    target 36
-    diffweight "U0^2"
-  ]
-  edge [
-    source 34
     target 43
     diffweight "V0"
   ]
@@ -1438,11 +1318,6 @@ graph [
     source 34
     target 9
     diffweight "V0"
-  ]
-  edge [
-    source 35
-    target 28
-    diffweight "U0^2"
   ]
   edge [
     source 35
@@ -1681,16 +1556,6 @@ graph [
   ]
   edge [
     source 41
-    target 13
-    diffweight "V0^2"
-  ]
-  edge [
-    source 41
-    target 26
-    diffweight "V0^2"
-  ]
-  edge [
-    source 41
     target 35
     diffweight "U0"
   ]
@@ -1708,16 +1573,6 @@ graph [
     source 42
     target 45
     diffweight "U0"
-  ]
-  edge [
-    source 42
-    target 13
-    diffweight "V0^2"
-  ]
-  edge [
-    source 42
-    target 0
-    diffweight "V0^2"
   ]
   edge [
     source 42
@@ -1761,16 +1616,6 @@ graph [
   ]
   edge [
     source 44
-    target 0
-    diffweight "V0^2"
-  ]
-  edge [
-    source 44
-    target 24
-    diffweight "V0^2"
-  ]
-  edge [
-    source 44
     target 45
     diffweight "U0"
   ]
@@ -1796,11 +1641,6 @@ graph [
   ]
   edge [
     source 45
-    target 43
-    diffweight "V0^2"
-  ]
-  edge [
-    source 45
     target 29
     diffweight "U0"
   ]
@@ -1813,16 +1653,6 @@ graph [
     source 46
     target 45
     diffweight "V0"
-  ]
-  edge [
-    source 46
-    target 6
-    diffweight "U0^2"
-  ]
-  edge [
-    source 46
-    target 1
-    diffweight "U0^2"
   ]
   edge [
     source 46
@@ -1848,11 +1678,6 @@ graph [
     source 47
     target 16
     diffweight "V0"
-  ]
-  edge [
-    source 47
-    target 29
-    diffweight "U0^2"
   ]
   edge [
     source 47
