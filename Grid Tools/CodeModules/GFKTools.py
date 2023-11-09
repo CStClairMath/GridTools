@@ -164,7 +164,7 @@ def hv_set_shift(h,v,sigs):
         
     return result
 
-def truncated_sn(n, trunc_length): 
+def deprecated_truncated_sn(n, trunc_length): 
     
     #Input: n integer, trunc_length integer
     #
@@ -187,6 +187,23 @@ def truncated_sn(n, trunc_length):
             
     return result
 
+
+def truncated_sn(n, trunc_length):
+    
+    result = [[]]
+    hold = []
+    symset = list(range(1,n+1))
+    while len(result[0]) < trunc_length:
+        for sym in symset:
+            for res in result:
+                if not (sym in res):
+                    hold.append(res + [sym])
+        result = hold
+        hold = []
+        
+    return result
+    
+    
 def generate_all_states_outside_rectangle(rectangle, n): 
     
     #Input: rectangle = ((a0, b0), (a1, b1)), n integer
