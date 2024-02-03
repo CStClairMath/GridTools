@@ -8,8 +8,8 @@ graph [
     AGrading0 0
     UGrading0 0
     VGrading0 0
-    AGrading1 0
-    UGrading1 0
+    AGrading1 1
+    UGrading1 -2
     VGrading1 0
   ]
   node [
@@ -20,9 +20,9 @@ graph [
     UGrading0 -1
     VGrading0 -1
     AGrading0 0
-    UGrading1 -1
+    UGrading1 -3
     VGrading1 -1
-    AGrading1 0
+    AGrading1 1
   ]
   node [
     id 2
@@ -32,9 +32,9 @@ graph [
     UGrading0 -1
     VGrading0 -1
     AGrading0 0
-    UGrading1 1
+    UGrading1 -1
     VGrading1 -1
-    AGrading1 1
+    AGrading1 2
   ]
   node [
     id 3
@@ -44,9 +44,9 @@ graph [
     UGrading0 1
     VGrading0 -1
     AGrading0 1
-    UGrading1 -1
+    UGrading1 -3
     VGrading1 -1
-    AGrading1 0
+    AGrading1 1
   ]
   node [
     id 4
@@ -56,9 +56,9 @@ graph [
     UGrading0 0
     VGrading0 -2
     AGrading0 1
-    UGrading1 -2
+    UGrading1 -4
     VGrading1 -2
-    AGrading1 0
+    AGrading1 1
   ]
   node [
     id 5
@@ -68,9 +68,9 @@ graph [
     UGrading0 0
     VGrading0 -2
     AGrading0 1
-    UGrading1 -2
+    UGrading1 -4
     VGrading1 -2
-    AGrading1 0
+    AGrading1 1
   ]
   node [
     id 6
@@ -80,9 +80,9 @@ graph [
     UGrading0 0
     VGrading0 -2
     AGrading0 1
-    UGrading1 0
+    UGrading1 -2
     VGrading1 -2
-    AGrading1 1
+    AGrading1 2
   ]
   node [
     id 7
@@ -92,9 +92,9 @@ graph [
     UGrading0 -1
     VGrading0 -3
     AGrading0 1
-    UGrading1 -1
+    UGrading1 -3
     VGrading1 -3
-    AGrading1 1
+    AGrading1 2
   ]
   edge [
     source 0
