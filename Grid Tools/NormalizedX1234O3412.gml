@@ -5,12 +5,15 @@ graph [
     label "[1, 2, 3, 4]"
     HasBeenGraded0 1
     HasBeenGraded1 1
-    AGrading0 0
+    AGrading0 -1
+    AGrading1 -1
     UGrading0 0
-    VGrading0 0
-    AGrading1 0
     UGrading1 0
+    VGrading0 0
     VGrading1 0
+    HasBeenGraded 1
+    UGrading 0
+    VGrading 0
   ]
   node [
     id 1
@@ -18,11 +21,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 1
-    VGrading0 -1
-    AGrading0 1
     UGrading1 -1
+    VGrading0 -1
     VGrading1 -1
-    AGrading1 0
+    HasBeenGraded 1
+    UGrading 1
+    VGrading 1
+    AGrading0 -2
+    AGrading1 -1
   ]
   node [
     id 2
@@ -30,11 +36,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 -1
-    VGrading0 -1
-    AGrading0 0
     UGrading1 1
+    VGrading0 -1
     VGrading1 -1
-    AGrading1 1
+    HasBeenGraded 1
+    UGrading 1
+    VGrading 1
+    AGrading0 -1
+    AGrading1 -2
   ]
   node [
     id 3
@@ -42,11 +51,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 1
-    VGrading0 -1
-    AGrading0 1
     UGrading1 -1
+    VGrading0 -1
     VGrading1 -1
-    AGrading1 0
+    HasBeenGraded 1
+    UGrading 1
+    VGrading 1
+    AGrading0 -2
+    AGrading1 -1
   ]
   node [
     id 4
@@ -54,11 +66,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 -1
-    VGrading0 -1
-    AGrading0 0
     UGrading1 1
+    VGrading0 -1
     VGrading1 -1
-    AGrading1 1
+    HasBeenGraded 1
+    UGrading 1
+    VGrading 1
+    AGrading0 -1
+    AGrading1 -2
   ]
   node [
     id 5
@@ -66,11 +81,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 2
-    VGrading0 -2
-    AGrading0 2
     UGrading1 -2
+    VGrading0 -2
     VGrading1 -2
-    AGrading1 0
+    HasBeenGraded 1
+    UGrading 2
+    VGrading 2
+    AGrading0 -3
+    AGrading1 -1
   ]
   node [
     id 6
@@ -78,11 +96,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 0
-    VGrading0 -2
-    AGrading0 1
     UGrading1 0
+    VGrading0 -2
     VGrading1 -2
-    AGrading1 1
+    HasBeenGraded 1
+    UGrading 2
+    VGrading 2
+    AGrading0 -2
+    AGrading1 -2
   ]
   node [
     id 7
@@ -90,11 +111,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 0
-    VGrading0 -2
-    AGrading0 1
     UGrading1 0
+    VGrading0 -2
     VGrading1 -2
-    AGrading1 1
+    HasBeenGraded 1
+    UGrading 2
+    VGrading 2
+    AGrading0 -2
+    AGrading1 -2
   ]
   node [
     id 8
@@ -102,11 +126,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 0
-    VGrading0 -2
-    AGrading0 1
     UGrading1 0
+    VGrading0 -2
     VGrading1 -2
-    AGrading1 1
+    HasBeenGraded 1
+    UGrading 2
+    VGrading 2
+    AGrading0 -2
+    AGrading1 -2
   ]
   node [
     id 9
@@ -114,11 +141,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 0
-    VGrading0 -2
-    AGrading0 1
     UGrading1 0
+    VGrading0 -2
     VGrading1 -2
-    AGrading1 1
+    HasBeenGraded 1
+    UGrading 2
+    VGrading 2
+    AGrading0 -2
+    AGrading1 -2
   ]
   node [
     id 10
@@ -126,11 +156,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 1
-    VGrading0 -3
-    AGrading0 2
     UGrading1 -1
+    VGrading0 -3
     VGrading1 -3
-    AGrading1 1
+    HasBeenGraded 1
+    UGrading 3
+    VGrading 3
+    AGrading0 -3
+    AGrading1 -2
   ]
   node [
     id 11
@@ -138,11 +171,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 1
-    VGrading0 -3
-    AGrading0 2
     UGrading1 -1
+    VGrading0 -3
     VGrading1 -3
-    AGrading1 1
+    HasBeenGraded 1
+    UGrading 3
+    VGrading 3
+    AGrading0 -3
+    AGrading1 -2
   ]
   node [
     id 12
@@ -150,11 +186,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 -1
-    VGrading0 -3
-    AGrading0 1
     UGrading1 1
+    VGrading0 -3
     VGrading1 -3
-    AGrading1 2
+    HasBeenGraded 1
+    UGrading 3
+    VGrading 3
+    AGrading0 -2
+    AGrading1 -3
   ]
   node [
     id 13
@@ -162,11 +201,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 -1
-    VGrading0 -3
-    AGrading0 1
     UGrading1 1
+    VGrading0 -3
     VGrading1 -3
-    AGrading1 2
+    HasBeenGraded 1
+    UGrading 3
+    VGrading 3
+    AGrading0 -2
+    AGrading1 -3
   ]
   node [
     id 14
@@ -174,11 +216,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 0
-    VGrading0 -4
-    AGrading0 2
     UGrading1 0
+    VGrading0 -4
     VGrading1 -4
-    AGrading1 2
+    HasBeenGraded 1
+    UGrading 4
+    VGrading 4
+    AGrading0 -3
+    AGrading1 -3
   ]
   node [
     id 15
@@ -186,11 +231,14 @@ graph [
     HasBeenGraded0 1
     HasBeenGraded1 1
     UGrading0 -2
-    VGrading0 -2
-    AGrading0 0
     UGrading1 2
+    VGrading0 -2
     VGrading1 -2
-    AGrading1 2
+    HasBeenGraded 1
+    UGrading 2
+    VGrading 2
+    AGrading0 -1
+    AGrading1 -3
   ]
   edge [
     source 0
