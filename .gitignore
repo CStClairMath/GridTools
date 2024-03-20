@@ -1,2 +1,9 @@
+#Ignore outputs/data files except for the smallest examples to save space
 *.p
 *.gml
+!k3_1.gml
+!Normalizedk3_1.gml
+!k4_1.gml
+!Normalizedk4_1.gml
+!k3_1gfk.p
+!k4_1gfk.p
