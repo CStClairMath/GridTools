@@ -9,6 +9,7 @@ graph [
     HasBeenGraded 1
     UGrading 1
     VGrading 1
+    AGrading -3
     AGrading0 -3
   ]
   node [
@@ -20,6 +21,7 @@ graph [
     HasBeenGraded 1
     UGrading 5
     VGrading 5
+    AGrading -7
     AGrading0 -7
   ]
   node [
@@ -31,6 +33,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   node [
@@ -42,6 +45,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   node [
@@ -53,6 +57,7 @@ graph [
     HasBeenGraded 1
     UGrading 5
     VGrading 5
+    AGrading -7
     AGrading0 -7
   ]
   node [
@@ -64,6 +69,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   node [
@@ -75,6 +81,7 @@ graph [
     HasBeenGraded 1
     UGrading 5
     VGrading 5
+    AGrading -7
     AGrading0 -7
   ]
   node [
@@ -86,6 +93,7 @@ graph [
     HasBeenGraded 1
     UGrading 4
     VGrading 4
+    AGrading -6
     AGrading0 -6
   ]
   node [
@@ -97,6 +105,7 @@ graph [
     HasBeenGraded 1
     UGrading 4
     VGrading 4
+    AGrading -6
     AGrading0 -6
   ]
   node [
@@ -108,6 +117,7 @@ graph [
     HasBeenGraded 1
     UGrading 2
     VGrading 2
+    AGrading -4
     AGrading0 -4
   ]
   node [
@@ -119,6 +129,7 @@ graph [
     HasBeenGraded 1
     UGrading 2
     VGrading 2
+    AGrading -4
     AGrading0 -4
   ]
   node [
@@ -130,6 +141,7 @@ graph [
     HasBeenGraded 1
     UGrading 6
     VGrading 6
+    AGrading -8
     AGrading0 -8
   ]
   node [
@@ -141,6 +153,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   node [
@@ -152,6 +165,7 @@ graph [
     HasBeenGraded 1
     UGrading 1
     VGrading 1
+    AGrading -3
     AGrading0 -3
   ]
   node [
@@ -163,6 +177,7 @@ graph [
     HasBeenGraded 1
     UGrading 5
     VGrading 5
+    AGrading -7
     AGrading0 -7
   ]
   node [
@@ -174,6 +189,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   node [
@@ -185,6 +201,7 @@ graph [
     HasBeenGraded 1
     UGrading 2
     VGrading 2
+    AGrading -4
     AGrading0 -4
   ]
   node [
@@ -196,6 +213,7 @@ graph [
     HasBeenGraded 1
     UGrading 4
     VGrading 4
+    AGrading -6
     AGrading0 -6
   ]
   node [
@@ -207,6 +225,7 @@ graph [
     HasBeenGraded 1
     UGrading 4
     VGrading 4
+    AGrading -6
     AGrading0 -6
   ]
   node [
@@ -218,6 +237,7 @@ graph [
     HasBeenGraded 1
     UGrading 2
     VGrading 2
+    AGrading -4
     AGrading0 -4
   ]
   node [
@@ -229,6 +249,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   node [
@@ -240,6 +261,7 @@ graph [
     HasBeenGraded 1
     UGrading 1
     VGrading 1
+    AGrading -3
     AGrading0 -3
   ]
   node [
@@ -251,6 +273,7 @@ graph [
     HasBeenGraded 1
     UGrading 5
     VGrading 5
+    AGrading -7
     AGrading0 -7
   ]
   node [
@@ -262,6 +285,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   node [
@@ -273,6 +297,7 @@ graph [
     HasBeenGraded 1
     UGrading 1
     VGrading 1
+    AGrading -3
     AGrading0 -3
   ]
   node [
@@ -284,6 +309,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   node [
@@ -295,6 +321,7 @@ graph [
     HasBeenGraded 1
     UGrading 1
     VGrading 1
+    AGrading -3
     AGrading0 -3
   ]
   node [
@@ -306,6 +333,7 @@ graph [
     HasBeenGraded 1
     UGrading 2
     VGrading 2
+    AGrading -4
     AGrading0 -4
   ]
   node [
@@ -317,6 +345,7 @@ graph [
     HasBeenGraded 1
     UGrading 4
     VGrading 4
+    AGrading -6
     AGrading0 -6
   ]
   node [
@@ -328,6 +357,7 @@ graph [
     HasBeenGraded 1
     UGrading 4
     VGrading 4
+    AGrading -6
     AGrading0 -6
   ]
   node [
@@ -340,6 +370,7 @@ graph [
     HasBeenGraded 1
     UGrading 0
     VGrading 0
+    AGrading -2
   ]
   node [
     id 31
@@ -350,6 +381,7 @@ graph [
     HasBeenGraded 1
     UGrading 4
     VGrading 4
+    AGrading -6
     AGrading0 -6
   ]
   node [
@@ -361,6 +393,7 @@ graph [
     HasBeenGraded 1
     UGrading 4
     VGrading 4
+    AGrading -6
     AGrading0 -6
   ]
   node [
@@ -372,6 +405,7 @@ graph [
     HasBeenGraded 1
     UGrading 4
     VGrading 4
+    AGrading -6
     AGrading0 -6
   ]
   node [
@@ -383,6 +417,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   node [
@@ -394,6 +429,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   node [
@@ -405,6 +441,7 @@ graph [
     HasBeenGraded 1
     UGrading 4
     VGrading 4
+    AGrading -6
     AGrading0 -6
   ]
   node [
@@ -416,6 +453,7 @@ graph [
     HasBeenGraded 1
     UGrading 2
     VGrading 2
+    AGrading -4
     AGrading0 -4
   ]
   node [
@@ -427,6 +465,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   node [
@@ -438,6 +477,7 @@ graph [
     HasBeenGraded 1
     UGrading 2
     VGrading 2
+    AGrading -4
     AGrading0 -4
   ]
   node [
@@ -449,6 +489,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   node [
@@ -460,6 +501,7 @@ graph [
     HasBeenGraded 1
     UGrading 2
     VGrading 2
+    AGrading -4
     AGrading0 -4
   ]
   node [
@@ -471,6 +513,7 @@ graph [
     HasBeenGraded 1
     UGrading 2
     VGrading 2
+    AGrading -4
     AGrading0 -4
   ]
   node [
@@ -482,6 +525,7 @@ graph [
     HasBeenGraded 1
     UGrading 2
     VGrading 2
+    AGrading -4
     AGrading0 -4
   ]
   node [
@@ -493,6 +537,7 @@ graph [
     HasBeenGraded 1
     UGrading 2
     VGrading 2
+    AGrading -4
     AGrading0 -4
   ]
   node [
@@ -504,6 +549,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   node [
@@ -515,6 +561,7 @@ graph [
     HasBeenGraded 1
     UGrading 4
     VGrading 4
+    AGrading -6
     AGrading0 -6
   ]
   node [
@@ -526,6 +573,7 @@ graph [
     HasBeenGraded 1
     UGrading 3
     VGrading 3
+    AGrading -5
     AGrading0 -5
   ]
   edge [
