@@ -452,8 +452,26 @@ def generate_all_edges(n, symbols):
             
     return unweighted_diff
 
+def imp_from_pickle(filename = 'DefaultPickle.pickle'):
+    
+# Imports pickle file and returns the object. Will import from DefaultPickleComp if no name is provided
+    
+    if filename == 'DefaultPickleComp':
+        print('No name provided for import - importing from DefaultPickleComp')
+    
+    
+    try:
+        file = open(filename,'rb')
+        print("file opened")
+    except:
+        print('Ran into an error: Make sure you\'ve exported to the file you\'re trying to import from')
+    stuff = pickle.load(file)
+    file.close()
+    print('file closed')
+    return stuff
 
-def pickle_it(comp, filename):
+
+def pickle_it(comp, filename = "PickleDefault.pickle"):
     
     #Input: comp is any data (Usually a complex as a networkx type graph) and str filename
     #Exports the complex as a binary file using the pickle module, just shorthand

@@ -164,7 +164,7 @@ def hv_set_shift(h,v,sigs):
         
     return result
 
-def truncated_sn(n, trunc_length): 
+def deprecated_truncated_sn(n, trunc_length): 
     
     #Input: n integer, trunc_length integer
     #
@@ -187,6 +187,23 @@ def truncated_sn(n, trunc_length):
             
     return result
 
+
+def truncated_sn(n, trunc_length):
+    
+    result = [[]]
+    hold = []
+    symset = list(range(1,n+1))
+    while len(result[0]) < trunc_length:
+        for sym in symset:
+            for res in result:
+                if not (sym in res):
+                    hold.append(res + [sym])
+        result = hold
+        hold = []
+        
+    return result
+    
+    
 def generate_all_states_outside_rectangle(rectangle, n): 
     
     #Input: rectangle = ((a0, b0), (a1, b1)), n integer
@@ -435,8 +452,26 @@ def generate_all_edges(n, symbols):
             
     return unweighted_diff
 
+def imp_from_pickle(filename = 'DefaultPickle.pickle'):
+    
+# Imports pickle file and returns the object. Will import from DefaultPickleComp if no name is provided
+    
+    if filename == 'DefaultPickleComp':
+        print('No name provided for import - importing from DefaultPickleComp')
+    
+    
+    try:
+        file = open(filename,'rb')
+        print("file opened")
+    except:
+        print('Ran into an error: Make sure you\'ve exported to the file you\'re trying to import from')
+    stuff = pickle.load(file)
+    file.close()
+    print('file closed')
+    return stuff
 
-def pickle_it(comp, filename):
+
+def pickle_it(comp, filename = "PickleDefault.pickle"):
     
     #Input: comp is any data (Usually a complex as a networkx type graph) and str filename
     #Exports the complex as a binary file using the pickle module, just shorthand
@@ -464,9 +499,14 @@ def build_cinf(symbols):
     
     comp = generate_all_edges(size, [xlist,olist])
     g = nx.DiGraph()
+#     nx.set_edge_attributes(g, {'diffweight':[]})
     for ele in comp:
         
-        g.add_edge(str(ele[0][0]),str(ele[0][1]), diffweight = (ele[2][0] + ele[2][1]))
+        if not g.has_edge(str(ele[0][0]),str(ele[0][1])):
+
+            g.add_edge(str(ele[0][0]),str(ele[0][1]), diffweight = [])
+            
+        g[str(ele[0][0])][str(ele[0][1])]['diffweight'].append((ele[2][0] + ele[2][1]))
     
     return g
 
