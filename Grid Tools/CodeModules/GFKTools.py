@@ -452,7 +452,7 @@ def generate_all_edges(n, symbols):
             
     return unweighted_diff
 
-def imp_from_pickle(filename = 'DefaultPickle.pickle'):
+def imp_from_pickle(filename = 'PickleDefault.pickle'):
     
 # Imports pickle file and returns the object. Will import from DefaultPickleComp if no name is provided
     
