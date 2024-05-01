@@ -1,7 +1,10 @@
 import sys
 import pickle
 import time
-from .perm import *
+try:
+    from .perm import *
+except:
+    from perm import *
 import networkx as nx
 
 

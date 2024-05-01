@@ -13,11 +13,11 @@ from scipy import sparse
 import matplotlib.pyplot as plt
 import multiprocessing as mp
 #from sage.graphs.graph_decompositions.graph_products import is_cartesian_product
-import CodeModules.GFKTools as gfk
-from CodeModules.GridPermutations import *
+import GFKTools as gfk
+from GridPermutations import *
 import time
 import pickle
-import CodeModules.perm as pr
+import perm as pr
 from multiprocessing.managers import BaseManager
 import random as rd
 
@@ -28,18 +28,20 @@ OUTPUTDIRECTORY = 'Outputs/'
 PRINT_PROGRESS = True
 
 class MyManager(BaseManager):
-    
+
+    # Necessary class definition for parallel processing
+
     pass
 
 class grid_complex:
     
-    #This is the data type that holds all the information and most of the functions and methods necessary
-    #to produce and manipulate the graded complex.
+    # This is the data type that holds all the information and most of the functions and methods necessary
+    # to produce and manipulate the graded complex.
     
     def __init__(self, directed_graph, rng, sigx = None, sigo = None):
     
-    #Initializing and setting default values. sigx and sigo should generally be provided - fail safes are included
-    #however if they're ever used then only the relative grading of the final object will be correct
+    # Initializing and setting default values. sigx and sigo should generally be provided - fail safes are included
+    # however if they're ever used then only the relative grading of the final object will be correct
     
         if type(directed_graph) != nx.DiGraph:
             raise("!This data type only supports networkx digraphs!")
@@ -52,8 +54,9 @@ class grid_complex:
         self.sigx = sigx
         self.sigo = sigo
         self.set_to_minus = False
+        self.set_to_tilde = False
         
-        #From here the values necessary for the surgered manifold gradings are mapped out
+        # From here the values necessary for the surgered manifold gradings are mapped out
         
         if (sigx != None) and (sigo != None):
             self.size = len(sigx)
@@ -74,22 +77,26 @@ class grid_complex:
                 self.max_grading_changes[key] = _sage_const_0 
         else:
             
-        #This is included in case the methods in the class are useful to another complex being loaded in
+        # This is included in case the methods in the class are useful to another complex being loaded in
         
             self.components = None
         
         
     def __repr__(self):
-        #If the object is called it will return the underlying digraph
+
+        # If the object is called it will return the underlying digraph
         return self.comp
     
     def subcomplex(self, subgraph):
-        #This is essentially just the subgraph - may not be an actual subcomplex if poor choice of vertices/edges are made
+
+        # This is essentially just the subgraph - may not be an actual subcomplex if poor choice of vertices/edges are made
         sub_copy = subgraph.copy()
         result = grid_complex(sub_copy, self.ring)
         
     
     def copy(self):
+
+        # Adds copy functionality like the copy module
         if self.sigx == None:
             new_copy = grid_complex(self.comp.copy(), self.ring)
         else:
@@ -97,7 +104,7 @@ class grid_complex:
         return new_copy
     
     def grid(self):        
-        #Adding functionality to return the original grid that produced the complex
+        # Adding functionality to return the original grid that produced the complex
         return [self.sigx, self.sigo]
 
     
@@ -110,6 +117,8 @@ class grid_complex:
     
     
     def to_hat(self):
+
+        # Substitutes 0 for all the U and V variables in the complex
 
         print("setting Ui's and Vi's = 0")
         gens = self.ring.gens()
@@ -126,7 +135,9 @@ class grid_complex:
     
     
     def to_minus(self):
-    #Substitutes U0 for all the Ui and 1 for Vi
+
+        # Substitutes U0 for all the Ui and 1 for Vi
+
         self.set_to_minus = True
         print("normalizing Ui's and setting Vi = 1")
         gens = self.ring.gens()
@@ -136,7 +147,7 @@ class grid_complex:
             for component in self.components:
                 for i in component:
 
-#                     if i == component[0]: continue
+                    # if i == component[0]: continue
                     setting_var = component[_sage_const_0 ] - _sage_const_1 
                     src = edge[_sage_const_0 ]
                     tar = edge[_sage_const_1 ]
@@ -146,8 +157,38 @@ class grid_complex:
         self.remove_zeros()
         return
 
+
+    def to_tilde(self, overwrite = True):
+
+        # Converts the complex to the tilde flavor by setting all the U's and V's to 0
+        # overwrite option determines whether to apply it to the complex or to make a copy and apply
+        # the changes there.
+
+        if overwrite == False:
+
+            replacement = self.copy()
+            return replacement.to_tilde()
+
+        self.set_to_tilde = True
+        print("Setting all U's and V's to 0")
+        gens = self.ring.gens()
+        size = len(gens)/_sage_const_2     
+
+        for edge in self.comp.edges():
+
+            for i in range(_sage_const_2 *size):
+
+                src = edge[_sage_const_0 ]
+                tar = edge[_sage_const_1 ]
+                self.comp[src][tar]['diffweight'] = self.comp[src][tar]['diffweight'].subs({gens[i]:_sage_const_0 })
+
+        self.remove_zeros()
+
+        return self
+
     def link_normalize(self):
-    #Substitutes Ucomp for all the Ui associated to that component
+
+        # Substitutes Ucomp for all the Ui associated to that component
 
         gens = self.ring.gens()
         size = len(gens)/_sage_const_2     
@@ -186,6 +227,8 @@ class grid_complex:
 
     def remove_zeros(self):
 
+    # Searches the complex for edges with weight 0 and removes the edge
+
         elist = list(self.comp.edges())
         for x,y in elist:
 
@@ -197,7 +240,10 @@ class grid_complex:
 
 
     def split_by_grading(self, partition_list, key):
-    #partition list is supposed to be of the form matching the partition function's output
+
+        # Unnecessary in current version - different approach to parallelization
+        # partition_list is expected to be of the form matching the partition function's output.
+
         result = []
         
         for data in partition_list:
@@ -209,9 +255,9 @@ class grid_complex:
     
     
     def graph_red_search(self, started = False, timerstart = None): 
-    #searches through a cfk inf complex for reducible edges and calling
-    #the reduction function to eliminate the pair according to the reduction algorithm
-    #     dict_graph = nx.to_dict_of_dicts(given_graph)
+
+        # searches through a cfk inf complex for reducible edges and calling
+        # the reduction function to eliminate the pair according to the reduction algorithm
         
         if not started:
             timerstart = time.time()    
@@ -228,14 +274,6 @@ class grid_complex:
             except:
                 ("StopIteration")
             break
-                
-#         for key in self.comp:
-
-#             for target in self.comp[key]:
-
-#                 if self.comp[key][target]['diffweight'] == 1:
-#                     self.graph_reduction(key, target)
-#                     return self.graph_red_search(True, timerstart)
 
         timerstop = time.time()
         # print('Time to reduce complex: ' + str(timerstop - timerstart))
@@ -243,8 +281,10 @@ class grid_complex:
         return
 
     def graph_reduction(self, key, target):
-    #Deletes edge specified from graph_red_search and adds in edges according to the
-    #reduction algorithm
+
+        # Deletes edge specified from graph_red_search and adds in edges according to the
+        # reduction algorithm
+
         for x in self.comp.predecessors(target):
 
             if x == key: continue
@@ -263,18 +303,60 @@ class grid_complex:
         self.comp.remove_node(target)
         return
 
+
+    def minus_reduction(self, overwrite = True):
+    
+        # Reduces the complex but only reducing edges between vertices that are in the same Alexander gradings
+        # Note: This will not overwrite (regardless of argument) if the complex hasn't been converted to the minus flavor. Instead, it
+        # will make a copy, do the reduction there, and return the new complex
+
+        if self.set_to_minus == False:
+            replacement = self.copy()
+            replacement.to_minus()
+            replacement.minus_reduction(True)
+
+        if overwrite == False:
+            replacement = self.copy()
+            replacement.minus_reduction(True)
+
+        while True:
+
+            starting_edge_count = len([source for source, target, weight in self.comp.edges(data = 'diffweight') if (weight == _sage_const_1  and alexander_grading_equivalent(self.comp, source, target, len(self.components)))])
+
+            try:
+
+                source, target = next((source, target) for source, target, weight in self.comp.edges(data = 'diffweight') if (weight == _sage_const_1  and alexander_grading_equivalent(self.comp, source, target, len(self.components))))
+                print("my alexander function returned " + str(alexander_grading_equivalent(self.comp, source, target, len(self.components))))
+                print(self.comp.nodes()[source]["AGrading0"])
+                print(self.comp.nodes()[target]["AGrading0"])
+                # print(self.comp.nodes()[source]["AGrading1"])
+                self.graph_reduction(source, target)
+            except StopIteration:
+                pass
+            except:
+                print("Unexpected Error")
+
+            end_edge_count = len([source for source, target, weight in self.comp.edges(data = 'diffweight') if (weight == _sage_const_1  and alexander_grading_equivalent(self.comp, source, target, len(self.components)))])
+
+            if starting_edge_count == end_edge_count:
+
+                break
+
+        return self
+
+
     def grade_link_complex(self):
 
-        #Input: given_graph a networkx directed graph with 'diffweight' attribute on edges
-        #       given_field the laurent polynomial field associated to the grid graph
-        #       gridX a list representing the vertex to be graded 0 in U V and Alexander gradings
+        # Input: given_graph a networkx directed graph with 'diffweight' attribute on edges
+        #        given_field the laurent polynomial field associated to the grid graph
+        #        gridX a list representing the vertex to be graded 0 in U V and Alexander gradings
         #
-        #Output: given_graph with new attributes on the vertices for U V and Alexander gradings
-        #        also an attribute HasBeenGraded as an artifact
+        # Output: given_graph with new attributes on the vertices for U V and Alexander gradings
+        #         also an attribute HasBeenGraded as an artifact
 
 
-        #If the positions of the Xs aren't provided we'll initialize around whatever
-        #state happens to appear first in the digraph structure - This will mean the complex's absolute grading will be off
+        # If the positions of the Xs aren't provided we'll initialize around whatever
+        # state happens to appear first in the digraph structure - This will mean the complex's absolute grading will be off
         if self.sigx == None:
 
             gridX = list(self.comp.nodes())[_sage_const_0 ]
@@ -298,12 +380,12 @@ class grid_complex:
 
         comp_set = len(self.components)
 
-        #Adding an attribute to all nodes to keep track of if they've been assigned gradings
+        # Adding an attribute to all nodes to keep track of if they've been assigned gradings
         for i in range(comp_set):
             nx.set_node_attributes(self.comp, False, f"HasBeenGraded{i}")
 
-        #The gradings are relative so we're declaring one to be in U, V, and Alexander grading 0
-        #this block initializes those balues
+        # The gradings are relative so we're declaring one to be in U, V, and Alexander grading 0
+        # this block initializes those balues
         for i in range(comp_set):
 #             self.comp.nodes()[str(gridX)][f'HasBeenGraded{i}'] = True
             self.comp.nodes()[str(gridX)][f'AGrading{i}'] = _sage_const_0 
@@ -312,7 +394,7 @@ class grid_complex:
 
         if TIMERS: timerstart = time.time()
 
-        #Built in function to find a spanning tree
+        # Built in function to find a spanning tree
         #span = nx.algorithms.tree.branchings.greedy_branching(given_graph)
 
         tree = nx.algorithms.minimum_spanning_tree( self.comp.to_undirected()  )
@@ -334,14 +416,14 @@ class grid_complex:
             timerstop = time.time()
             print("Time to find arborescence:" + str(timerstop - timerstart))
 
-        #Bit of baseball terminology for the following nested loops, the active data is essentially at bat, the list we're working
-        #through is called on_deck, and then we're building up the follow up as in_the_hole which will turn into
-        #on deck on the following loop
+        # Bit of baseball terminology for the following nested loops, the active data is essentially at bat, the list we're working
+        # through is called on_deck, and then we're building up the follow up as in_the_hole which will turn into
+        # on deck on the following loop
         #
-        #On deck holds the edges to be iterated through
+        # On deck holds the edges to be iterated through
         on_deck = [str(gridX)]
 
-        #In the hole holds the ones to be iterated through once on_deck is cleared
+        # In the hole holds the ones to be iterated through once on_deck is cleared
         in_the_hole = []
 
         if TIMERS: timerstart = time.time()
@@ -349,7 +431,7 @@ class grid_complex:
             
         comp_count = len(self.components)
             
-        #Grading Loops Start:
+        # Grading Loops Start:
         ####################
         
         self.componentwise_relative_grading_loop("UGrading", gridX, self.virtual_U_gradings_succ, self.virtual_U_gradings_pred, span, comp_count)
@@ -358,7 +440,7 @@ class grid_complex:
         self.relative_grading_loop("VGrading", gridX, self.maslov_V_succ, self.maslov_V_pred, span, comp_count)
         
         ####################
-        #Grading Loops End
+        # Grading Loops End
 
         for vert in self.comp.nodes():
             self.comp.nodes()[vert]['AGrading'] = _sage_const_0           
@@ -375,6 +457,8 @@ class grid_complex:
 
     def gml_export(self, filename = 'PleaseNameMe.gml'):
 
+        # Exports the graph as a gml file which can be opened in a program like Gephi
+
 #         if component_length == -1:
 #             return("!!! Unknown number of components for export !!!")
 
@@ -389,7 +473,9 @@ class grid_complex:
             print("You didn't name your output! It's been named PleaseNameMe.gml")
 
         if filename[-_sage_const_4 :] != ".gml":
-            filename += ".gml"
+            
+            return self.gml_export(filename + ".gml")
+            # filename += ".gml"
 
         for x,y in nxG.edges():
 
@@ -421,9 +507,10 @@ class grid_complex:
 
         return
 
-
-    
+  
     def find_grading_ranges(self, key = "AGrading"):
+
+        # Finds the minimum and maximum gradings among the vertices associated with a grading key
 
         self.min_gradings[key] = _sage_const_0 
         self.max_gradings[key] = _sage_const_0 
@@ -442,8 +529,10 @@ class grid_complex:
 
     
     def comp_truncate(self, grading_cutoff):
-    #Grading cutoff should be a tuple of values, this function will
-    #I've only considered this for calling after converting to minus complex
+
+        # Grading cutoff should be a tuple of values, this function will
+        # I've only considered this for calling after converting to minus complex
+
         generators = self.ring.gens()
         for i in range(len(self.components)):
             for vert in self.comp:
@@ -463,6 +552,9 @@ class grid_complex:
         return
     
     def surgery(self, grading_list = None, target_grading = None):
+
+        # Creates a copy of the graph and truncates it below every combination of Alexander gradings
+        # and reduces the resulting complexes then writes them out
 
         if grading_list == None:
             
@@ -511,6 +603,8 @@ class grid_complex:
     
     def relative_grading_loop(self, grading_key, base_vertex, fn1, fn2, span = None, grading_multiplicity = _sage_const_1 ):
 
+        # Loop structure around a vertex's neighbors to set gradings based on the functions fn1 and fn2.
+
         if span == None:
             
             span = self.comp
@@ -528,11 +622,11 @@ class grid_complex:
 
             for vert in on_deck:
 
-                #Every vertex in on_deck should be graded. The loops iterate through the neighbors of each of these
-                #vertices, grading them and then adding them to in_the_hole, ignoring vertices that have already been graded.
+                # Every vertex in on_deck should be graded. The loops iterate through the neighbors of each of these
+                # vertices, grading them and then adding them to in_the_hole, ignoring vertices that have already been graded.
                 #
-                #The loop is broken into two halves since we have two flavors of neighbor in a directed graph, successors and
-                #predecessors, named accordingly. These flavors differ in relative grading change by a sign.
+                # The loop is broken into two halves since we have two flavors of neighbor in a directed graph, successors and
+                # predecessors, named accordingly. These flavors differ in relative grading change by a sign.
                 for i, component_columns in enumerate(self.components):
                     for succ in span.successors(vert): 
 
@@ -563,6 +657,9 @@ class grid_complex:
     
     def componentwise_relative_grading_loop(self, grading_key, base_vertex, fn1, fn2, span = None, grading_multiplicity = _sage_const_1 ):
 
+        # Loop structure around a vertex's neighbors to set gradings based on the functions fn1 and fn2, passing
+        # the functions are passed component information as well
+
         if span == None:
             
             span = self.comp
@@ -581,11 +678,11 @@ class grid_complex:
 
             for vert in on_deck:
 
-                #Every vertex in on_deck should be graded. The loops iterate through the neighbors of each of these
-                #vertices, grading them and then adding them to in_the_hole, ignoring vertices that have already been graded.
+                # Every vertex in on_deck should be graded. The loops iterate through the neighbors of each of these
+                # vertices, grading them and then adding them to in_the_hole, ignoring vertices that have already been graded.
                 #
-                #The loop is broken into two halves since we have two flavors of neighbor in a directed graph, successors and
-                #predecessors, named accordingly. These flavors differ in relative grading change by a sign.
+                # The loop is broken into two halves since we have two flavors of neighbor in a directed graph, successors and
+                # predecessors, named accordingly. These flavors differ in relative grading change by a sign.
                 for i, component_columns in enumerate(self.components):
                     for succ in span.successors(vert): 
 
@@ -612,6 +709,9 @@ class grid_complex:
             in_the_hole = []
                         
         return
+# The following block of function definitions are the supporting functions for the grading loops
+# These are passed as fn1 and fn2 to the grading loops in the grading function
+#########################################
 
     def virtual_U_gradings_pred(self, i, pred, vert, component_columns):
 
@@ -693,11 +793,16 @@ class grid_complex:
 
         return
     
+    #########################################
+    # End of relative grading support functions
+
+
     def find_max_difference(self, key_set):
-    #For a given set of keys this function iterates through the graph and finds the largest difference. This could be improvable
-    #speed-wise by considering edges instead but as it stands the grading would have to be recomputed since that data is
-    #recorded in  the vertices instead. So in its current state that would be more expensive in processing and this is cheaper
-    #memory wise regardless.
+
+        # For a given set of keys this function iterates through the graph and finds the largest difference. This could be improvable
+        # speed-wise by considering edges instead but as it stands the grading would have to be recomputed since that data is
+        # recorded in  the vertices instead. So in its current state that would be more expensive in processing and this is cheaper
+        # memory wise regardless.
     
         if type(key_set) == str:
             key_set = [key_set]
@@ -717,8 +822,10 @@ class grid_complex:
     
     def parallel_graph_single_split(self, key, split_count, split_blocks = None):
         
-    #WARNING: !!!split count should be passed at most one lower than the actual number of cores available, this is because of 
-    #ceilings being a part of the function - it means it can return a set with more blocks than the given split count!!! 
+        # Deprecated by ego split 
+
+        # WARNING: !!!split count should be passed at most one lower than the actual number of cores available, this is because of 
+        # ceilings being a part of the function - it means it can return a set with more blocks than the given split count!!! 
   
         self.find_max_difference(key)
         
@@ -780,6 +887,11 @@ class grid_complex:
     
     def grading_parallel_graph_red_search(self, proc_count = _sage_const_2 , splitting_key = "AGrading"):
         
+        # Deprecated by ego_parallel_red_search
+        
+        # graph_red_search with parallel processing by splitting into pieces based on splitting_key
+
+
         key = splitting_key
         
         subgraph_set = self.parallel_graph_single_split(splitting_key, proc_count - _sage_const_1 )
@@ -810,6 +922,9 @@ class grid_complex:
     
 
     def ego_parallel_red_search(self, cutoff = _sage_const_100 , proc_count = _sage_const_2 ):
+
+        # graph_red_search with parallel processing support by using networkx ego graph function
+        # to split the graph
         
         if len([source for source, target, weight in self.comp.edges(data = 'diffweight') if weight == _sage_const_1 ]) > cutoff:
             print("entering parallel reduction")
@@ -883,8 +998,10 @@ class grid_complex:
     
     
 def subgraph_red_search(subg, search_reg, result_list):
-#     print(search_region)
-    # print(type(search_reg))
+
+    # graph_red_search limited to the subgraph search_reg, results are appended to result_list
+    # which in practice is a proxy list object handled by a multiprocessing manager
+
     subgraph = subg.copy()
     search_region = search_reg.copy()
     og_size = len(subgraph.comp.nodes())
@@ -904,23 +1021,11 @@ def subgraph_red_search(subg, search_reg, result_list):
             
     return
     
-    
-# def scatter(permutation):
-    
-#     p = pr.perm(permutation)
-#     size = len(p)
-#     result = []
-#     cycle = pr.full_cycle(size)
-#     for i in range(size):
-#         result.append(p)
-#         p = cycle*p
-        
-#     return result
-
-# def scatter_graph(permutation, graph):
-    
 
 def ego_split(graph, vertex, n):
+
+    # Returns a list of collections of vertices whose index is also their distance from the provided vertex
+    # Safety is provided to catch any separate components.
     
     result = []
     
@@ -940,6 +1045,9 @@ def ego_split(graph, vertex, n):
 
 def ego_region_partition(n):
     
+    # Returns a dictionary of dictionaries which indicate the regions that are going to be reduced and
+    # preserved during the parallel reduction
+
     result = {}
     
     split_count = math.ceil(n/_sage_const_4 )
@@ -953,19 +1061,24 @@ def ego_region_partition(n):
     return result
 
 def parallel_subgraph_packer(graph, subgraphs, region_data, ring):
-    #region_data should be a dict of dicts with inner dict data labeled "search_region" and "reserved_region"
-    #the outer data should be labeled f"block{i}". See ego_region_partition for an example function that works
-    #with this
+
+    # Takes the collections of vertices (intended for those from ego_split) as subgraphs from a parent
+    # graph and joins them up as subgraphs based on region_data. ring is provided to construct grid_complex objects
+    # from the resulting graphs.
+
+    # region_data should be a dict of dicts with inner dict data labeled "search_region" and "reserved_region"
+    # the outer data should be labeled f"block{i}". See ego_region_partition for an example function that works
+    # with this
     
-    #subgraphs should be a list of subgraphs corresponding to the region data specified above
+    # subgraphs should be a list of subgraphs corresponding to the region data specified above
     
     for data in region_data:
 #         print(region_data[data])
         
         region_nodes = []
         
-        #unpacking the indices of the subgraphs we were passed - so we need to unpack 3
-        #layers deep in total
+        # unpacking the indices of the subgraphs we were passed - so we need to unpack 3
+        # layers deep in total
         
         for region in region_data[data]:    
             for i in region_data[data][region]:
@@ -994,7 +1107,9 @@ def parallel_subgraph_packer(graph, subgraphs, region_data, ring):
     
 
 def subgraph_neighborhood(graph, subgraph):
-    #Output: subgraph induced by the given subgraph and any neighbors it has in graph
+
+    # Output: subgraph induced by the given subgraph and any neighbors it has in graph
+
     result_nodes = set(subgraph.nodes())
     for node in subgraph.nodes():
         
@@ -1041,8 +1156,11 @@ def name_some_vars(letters, num):
     
     return result
 
-def construct_cinf(g, sigx, sigo, size = -_sage_const_1 ): #Construct CFKinf complex from graph data - essentially just changing weights to polynomials
-                                  #Only works for grid diagrams *not* Latin Squares
+def construct_cinf(g, sigx, sigo, size = -_sage_const_1 ): 
+    
+    # Construct CFKinf complex from graph data - essentially just changing weights to polynomials
+    # Only works for grid diagrams *not* Latin Squares
+
     print('constructing cinf...')
     if size == -_sage_const_1 :
         size = len(g.get_edge_data(list(g.edges())[_sage_const_0 ][_sage_const_0 ],list(g.edges())[_sage_const_0 ][_sage_const_1 ])['diffweight'][_sage_const_0 ])  #kind of a mess - just turning the edges
@@ -1082,7 +1200,7 @@ def construct_cinf(g, sigx, sigo, size = -_sage_const_1 ): #Construct CFKinf com
     
 def cinf_coeff(size):
     
-# Takes size as an argument and returns the Laurent polynomial ring over Z2 with coefficients U0,...Usize-1,V0,...Vsize-1
+    # Takes size as an argument and returns the Laurent polynomial ring over Z2 with coefficients U0,...Usize-1,V0,...Vsize-1
     
     n = size
     varis = name_some_vars(['U','V'],n)
@@ -1094,7 +1212,7 @@ def cinf_coeff(size):
 
 def range_skip_entry(n, skip):
     
-# Acts similarly to standard range(n) but omits the "skip"th entry
+    # Acts similarly to standard range(n) but omits the "skip"th entry
 
     u = []
     for i in range(_sage_const_0 , skip): u.append(i)
@@ -1103,6 +1221,9 @@ def range_skip_entry(n, skip):
 
 
 def link_GFC(sigx, sigo, filename = None):
+
+    # Group of usual commands/functions used to produce, simplify and output a grid_complex and
+    # its simplification in one function - uses the parallel processing functions
 
     start_time = time.time()
     
@@ -1115,17 +1236,15 @@ def link_GFC(sigx, sigo, filename = None):
             filename = filename + str(pos)
         filename = filename + ".gml"
     
-    components = link_components(sigx, sigo)
-    link_count = len(components)
-    raw_complex = gfk.build_cinf([sigx, sigo])
-    comp = construct_cinf(raw_complex, sigx, sigo)
-    
-    comp.grade_link_complex()
+    comp = setup_complex(sigx, sigo)
+
     print("passing to parallel reducer")
     comp.ego_parallel_red_search(proc_count = PROCESSOR_COUNT)
 #     comp.parallel_graph_red_search(PROCESSOR_COUNT, split_key)
     print("completed parallel reducer function")
     comp.gml_export(filename)
+    picklefilename = filename + ".p"
+    gfk.pickle_it(comp, picklefilename)
 
     comp.link_normalize()
     
@@ -1133,6 +1252,8 @@ def link_GFC(sigx, sigo, filename = None):
     
     filename = "Normalized" + filename
     comp.gml_export(filename)
+    picklefilename = filename + ".p"
+    gfk.pickle_it(comp, picklefilename)
     
     for i in range(len(comp.components)):
         comp.find_grading_ranges(f'AGrading{i}')
@@ -1144,8 +1265,25 @@ def link_GFC(sigx, sigo, filename = None):
     return comp
 
 
-def link_components(sigx, sigo):
+
+def setup_complex(sigx, sigo):
+
+    # Takes two lists sigx and sigo, constructs and grades the associated complex then returns the result
+
+    raw_complex = gfk.build_cinf([sigx, sigo])
+
+    comp = construct_cinf(raw_complex, sigx, sigo)
     
+    comp.grade_link_complex()
+
+    return comp
+
+
+
+def link_components(sigx, sigo):
+
+    # Returns the number of components in the link defined by sigx and sigo
+
     xperm = pr.perm(sigx)
     operm = pr.perm(sigo)
     comps = xperm*operm**(-_sage_const_1 )
@@ -1155,9 +1293,9 @@ def link_components(sigx, sigo):
 
 def link_U_deg(poly, ring, component_columns):
 
-    #Input: poly a laurent polynomial in field a laurent polynomial ring
+    # Input: poly a laurent polynomial in field a laurent polynomial ring
     #
-    #Output: The total sum of powers of Ui in poly
+    # Output: The total sum of powers of Ui in poly
     
     gens = ring.gens()
     size = len(gens)/_sage_const_2 
@@ -1167,7 +1305,7 @@ def link_U_deg(poly, ring, component_columns):
     
     powers = poly.exponents()   
     
-    #len(powers) tells you how many terms the polynomial has
+    # len(powers) tells you how many terms the polynomial has
 #     if len(powers) > 1:
         
 #         print(poly)
@@ -1178,8 +1316,8 @@ def link_U_deg(poly, ring, component_columns):
         
         return _sage_const_0     
     
-    #powers is a list of lists since its intended for more than just monomials, since we are only care about the leading
-    #term we pull that one out
+    # powers is a list of lists since its intended for more than just monomials, since we are only care about the leading
+    # term we pull that one out
     powers = powers[_sage_const_0 ]
     
     for i in component_columns:
@@ -1203,19 +1341,15 @@ def link_V_deg(poly, ring, component_columns):
     
     powers = poly.exponents()   
     
-    #len(powers) tells you how many terms the polynomial has    
-#     if len(powers) > 1:
-        
-#         print(poly)
-#         raise Exception("Ran into a non-homogoneous degree change - polynomial wasn't a monomial")
-
     if len(powers) == _sage_const_0 :
         
         return _sage_const_0     
     
-    #powers is a list of lists since its intended for more than just monomials, since we are only care about the leading
-    #term we pull that one out
+    # powers is a list of lists since its intended for more than just monomials, since we are only care about the leading
+    # term we pull that one out
+
     powers = powers[_sage_const_0 ]
+
     for i in component_columns:
         
         degree = degree + powers[size + i-_sage_const_1 ]
@@ -1224,6 +1358,11 @@ def link_V_deg(poly, ring, component_columns):
 
 def parallel_active_range(max_grading_step, lower_range, upper_range, split_count):
     
+    # deprecated by ego parallelization
+
+    # Finds and returns the range of gradings that can be reduced without affecting the gluing region
+    # or bleeding outside of the reserved regions
+
     block_size = math.floor((upper_range - lower_range)/split_count)
     
     result = block_size - _sage_const_2 *max_grading_step
@@ -1232,6 +1371,12 @@ def parallel_active_range(max_grading_step, lower_range, upper_range, split_coun
     
     
 def degree_partition(max_grading_step, lower_range, upper_range, split_count):
+
+    # deprecated by ego parallelization
+
+    # Returns lists marking degrees for gluing, reducing and preserving when splitting the graph
+    # by grading for parallelization
+
     #output = list of lists
        
     if split_count == _sage_const_0 :
@@ -1280,6 +1425,19 @@ def degree_partition(max_grading_step, lower_range, upper_range, split_count):
         
     print(first_round)
     return first_round
+
+def alexander_grading_equivalent(comp, source, target, component_count):
+
+    #Returns bool for if two vertices have the same Alexander multigradings
+
+    result = True
+
+    for i in range(component_count):
+        if comp.nodes()[source][f'AGrading{i}'] != comp.nodes()[target][f'AGrading{i}']:
+            result = False
+
+    return result
+
 
 #End of main code block
 
