@@ -5,10 +5,4 @@ import sys
 
 index = int(sys.argv[1])
 
-link_partition = gfk.imp_from_pickle(f"./Pickles/size_8_batch_{index}")
-
-for entry in link_partition:
-    link = entry[0]
-    perms = entry[1]
-    reduced_comp = link_GFC(*perms, link)
-
+comp = link_GFC(*size_8_list[index][1], size_8_list[index][0])

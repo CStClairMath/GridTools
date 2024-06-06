@@ -8,16 +8,16 @@ import itertools as itools
 import networkx as nx
 import csv
 # import ast
-# import numpy as np
+import numpy as np
 from scipy import sparse
 import matplotlib.pyplot as plt
 import multiprocessing as mp
 #from sage.graphs.graph_decompositions.graph_products import is_cartesian_product
-import CodeModules.GFKTools as gfk
-from CodeModules.GridPermutations import *
+import GFKTools as gfk
+from GridPermutations import *
 import time
 import pickle
-import CodeModules.perm as pr
+import perm as pr
 from multiprocessing.managers import BaseManager
 import random as rd
 
@@ -435,9 +435,9 @@ class grid_complex:
         ####################
         
         self.componentwise_relative_grading_loop("UGrading", gridX, self.virtual_U_gradings_succ, self.virtual_U_gradings_pred, span, comp_count)
-        self.componentwise_relative_grading_loop("VGrading", gridO, self.virtual_V_gradings_succ, self.virtual_V_gradings_pred, span, comp_count)
+        self.componentwise_relative_grading_loop("VGrading", gridX, self.virtual_V_gradings_succ, self.virtual_V_gradings_pred, span, comp_count)
         self.relative_grading_loop("UGrading", gridX, self.maslov_U_succ, self.maslov_U_pred, span, comp_count)
-        self.relative_grading_loop("VGrading", gridO, self.maslov_V_succ, self.maslov_V_pred, span, comp_count)
+        self.relative_grading_loop("VGrading", gridX, self.maslov_V_succ, self.maslov_V_pred, span, comp_count)
         
         ####################
         # Grading Loops End
@@ -777,7 +777,7 @@ class grid_complex:
 
         component_columns = self.sigo
         
-        Vpows = link_V_deg(ed_weight, self.ring, component_columns)
+        Vpows = link_U_deg(ed_weight, self.ring, component_columns)
         self.comp.nodes()[pred]['VGrading'] = self.comp.nodes()[vert]['VGrading'] + _sage_const_1  - _sage_const_2 *Vpows        
         
         return
@@ -788,7 +788,7 @@ class grid_complex:
 
         component_columns = self.sigo
         
-        Vpows = link_V_deg(ed_weight, self.ring, component_columns)
+        Vpows = link_U_deg(ed_weight, self.ring, component_columns)
         self.comp.nodes()[succ]['VGrading'] = self.comp.nodes()[vert]['VGrading'] - _sage_const_1  + _sage_const_2 *Vpows
 
         return
@@ -996,41 +996,7 @@ class grid_complex:
         
         return
     
-
-    def newton_poly(self):
-
-    #Associates a polynomial to a complex by taking each vertex as a
-    #polynomial = \product t_i^(Alexander grading i) and summing
-
-        alex_vars = name_some_vars(['t'], len(self.components))
-
-        # R = LaurentPolynomialRing(ZZ, alex_vars + ['u'])
-        alex_names = alex_vars +['u']
-        alex_vars = var(alex_names)
-        # alex_vars = R.gens()
-        u = alex_vars[-_sage_const_1 ]
-        result = _sage_const_0 
-
-        for vert in self.comp.nodes():
-
-            adding_poly = _sage_const_1 
-            for i in range(len(self.components)):
-
-                pow = self.comp.nodes()[vert][f'AGrading{i}']
-                if pow != _sage_const_0 :
-                    # print(vert)
-                    # print(str(alex_vars[i]))
-                    # print(pow)
-                    adding_poly = adding_poly*(alex_vars[i]**pow)
-
-            pow = self.comp.nodes()[vert]['UGrading']
-            if pow != _sage_const_0 :
-                adding_poly = adding_poly*(u**pow)
-            result += adding_poly
-
-        return result
-
-
+    
 def subgraph_red_search(subg, search_reg, result_list):
 
     # graph_red_search limited to the subgraph search_reg, results are appended to result_list
@@ -1277,7 +1243,7 @@ def link_GFC(sigx, sigo, filename = None):
 #     comp.parallel_graph_red_search(PROCESSOR_COUNT, split_key)
     print("completed parallel reducer function")
     comp.gml_export(filename)
-    picklefilename = "Pickles/" + filename + ".p"
+    picklefilename = filename + ".p"
     gfk.pickle_it(comp, picklefilename)
 
     comp.link_normalize()
@@ -1286,7 +1252,7 @@ def link_GFC(sigx, sigo, filename = None):
     
     filename = "Normalized" + filename
     comp.gml_export(filename)
-    picklefilename = "Pickles/" +filename + ".p"
+    picklefilename = filename + ".p"
     gfk.pickle_it(comp, picklefilename)
     
     for i in range(len(comp.components)):

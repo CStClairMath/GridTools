@@ -193,6 +193,10 @@ def deprecated_truncated_sn(n, trunc_length):
 
 def truncated_sn(n, trunc_length):
     
+    # Takes an integer n and trunc_length say t, returns all combinations
+    # [a1, a2, ... , at] with ai != aj and all ai <= n
+
+
     result = [[]]
     hold = []
     symset = list(range(1,n+1))
@@ -252,7 +256,7 @@ def generate_all_states_outside_rectangle(rectangle, n):
             
             curr_state=[]
             curr_state.append(1)
-            curr_state = [1+r_height] + curr_state
+            curr_state += [1+r_height]
             
             for i in range(n-abs(r_width)-1):
                 
@@ -298,7 +302,7 @@ def generate_all_states_outside_rectangle(rectangle, n):
             
             curr_state=x.copy()
             curr_state.append(1)
-            curr_state = [1+r_height] + curr_state
+            curr_state += [1+r_height]
             
             for i in range(n-abs(r_width)-1):
                 
