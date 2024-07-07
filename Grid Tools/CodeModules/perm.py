@@ -21,6 +21,9 @@ class perm: #takes a list of integers and makes it a permutation type with stand
         else:
             self.value = lst.copy()
 
+    def __list__(self):
+        return (self.value)
+
     def __str__(self):
         return str(self.value)
             
