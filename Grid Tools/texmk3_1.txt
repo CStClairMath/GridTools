@@ -1,0 +1,34 @@
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}}$mk3_1$   \\ \hline 
+$\sigma_X$   & $[5, 4, 3, 2, 1]$ \\ 
+$\sigma_O$  & $[2, 1, 5, 4, 3]$ \\ 
+$GFC^\infty$   \\ 
+Number of Generators & 48 \\ 
+Number of Edges & 310 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $1/t0^5 + t0/u^6 + 5/u^5 + 11/(t0*u^4) + 14/(t0^2*u^3) + 11/(t0^3*u^2) + 5/(t0^4*u)$ 
+\item[Newton Polynomial (factored)] $(t0^2 + t0*u + u^2)*(t0 + u)^4/(t0^5*u^6)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-4<UGrading<0$   \\ 
+ & $-6<VGrading<0$   \\ 
+ & $-5<AGrading<0$   \\ 
+ & $-5<AGrading0<0$   \\ 
+& \\ 
+$GFC^-$   \\ 
+Number of Generators & 16 \\ 
+Number of Edges & 76 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $1/t0^5 + 1/(t0*u^4) + 4/(t0^2*u^3) + 6/(t0^3*u^2) + 4/(t0^4*u)$ 
+\item[Newton Polynomial (factored)] $(t0 + u)^4/(t0^5*u^4)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-4<UGrading<0$   \\ 
+ & $-6<VGrading<0$   \\ 
+ & $-5<AGrading<0$   \\ 
+ & $-5<AGrading0<0$   \\ 
+& \\ 
+\end{longtable}

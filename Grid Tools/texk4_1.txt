@@ -1,0 +1,34 @@
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}}$k4_1$   \\ \hline 
+$\sigma_X$   & $[6, 1, 4, 5, 3, 2]$ \\ 
+$\sigma_O$  & $[3, 5, 6, 2, 1, 4]$ \\ 
+$GFC^\infty$   \\ 
+Number of Generators & 160 \\ 
+Number of Edges & 1743 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $8/t0^5 + t0/u^6 + 8/u^5 + 26/(t0*u^4) + 45/(t0^2*u^3) + 45/(t0^3*u^2) + 26/(t0^4*u) + u/t0^6$ 
+\item[Newton Polynomial (factored)] $(t0^2 + 3*t0*u + u^2)*(t0 + u)^5/(t0^6*u^6)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-5<UGrading<0$   \\ 
+ & $-4<VGrading<0$   \\ 
+ & $-4<AGrading<0$   \\ 
+ & $-4<AGrading0<0$   \\ 
+& \\ 
+$GFC^-$   \\ 
+Number of Generators & 26 \\ 
+Number of Edges & 135 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $1/u^5 + 6/(t0*u^4) + 8/(t0^2*u^3) + 7/(t0^3*u^2) + 4/(t0^4*u)$ 
+\item[Newton Polynomial (factored)] $(t0^3 + 5*t0^2*u + 3*t0*u^2 + 4*u^3)*(t0 + u)/(t0^4*u^5)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-5<UGrading<0$   \\ 
+ & $-4<VGrading<0$   \\ 
+ & $-4<AGrading<0$   \\ 
+ & $-4<AGrading0<0$   \\ 
+& \\ 
+\end{longtable}
