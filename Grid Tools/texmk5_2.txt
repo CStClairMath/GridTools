@@ -1,0 +1,34 @@
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}}$mk5_2$   \\ \hline 
+$\sigma_X$   & $[4, 1, 7, 6, 3, 2, 5]$ \\ 
+$\sigma_O$  & $[7, 6, 5, 2, 1, 4, 3]$ \\ 
+$GFC^\infty$   \\ 
+Number of Generators & 450 \\ 
+Number of Edges & 8253 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $1/(t0^3*u^2) + 2/t0^7 + 2*t0/u^8 + 15/u^7 + 49/(t0*u^6) + 97/(t0^2*u^5) + 120/(t0^3*u^4) + 97/(t0^4*u^3) + 50/(t0^5*u^2) + 15/(t0^6*u) + 1/(t0^3*u^5) + 1/(t0*u^8)$ 
+\item[Newton Polynomial (factored)] $(t0^4*u^6 + 2*t0^8 + 15*t0^7*u + 49*t0^6*u^2 + 97*t0^5*u^3 + 120*t0^4*u^4 + 97*t0^3*u^5 + 50*t0^2*u^6 + 15*t0*u^7 + 2*u^8 + t0^4*u^3 + t0^6)/(t0^7*u^8)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-8<UGrading<0$   \\ 
+ & $-8<VGrading<0$   \\ 
+ & $-7<AGrading<0$   \\ 
+ & $-7<AGrading0<0$   \\ 
+& \\ 
+$GFC^-$   \\ 
+Number of Generators & 30 \\ 
+Number of Edges & 84 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $1/t0^7 + 1/(t0*u^6) + 3/(t0^2*u^5) + 7/(t0^3*u^4) + 5/(t0^4*u^3) + 5/(t0^5*u^2) + 6/(t0^6*u) + 1/(t0^3*u^5) + 1/(t0*u^8)$ 
+\item[Newton Polynomial (factored)] $(t0^6*u^2 + 3*t0^5*u^3 + 7*t0^4*u^4 + 5*t0^3*u^5 + 5*t0^2*u^6 + 6*t0*u^7 + u^8 + t0^4*u^3 + t0^6)/(t0^7*u^8)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-8<UGrading<0$   \\ 
+ & $-8<VGrading<0$   \\ 
+ & $-7<AGrading<0$   \\ 
+ & $-7<AGrading0<0$   \\ 
+& \\ 
+\end{longtable}

@@ -1,0 +1,34 @@
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}}$mk5_1$   \\ \hline 
+$\sigma_X$   & $[2, 1, 7, 6, 5, 4, 3]$ \\ 
+$\sigma_O$  & $[7, 6, 5, 4, 3, 2, 1]$ \\ 
+$GFC^\infty$   \\ 
+Number of Generators & 328 \\ 
+Number of Edges & 6062 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $1/t0^8 + t0^2/u^10 + 7*t0/u^9 + 22/u^8 + 43/(t0*u^7) + 56/(t0^2*u^6) + 63/(t0^3*u^5) + 57/(t0^4*u^4) + 41/(t0^5*u^3) + 21/(t0^6*u^2) + 7/(t0^7*u) + 1/(t0*u^8) + 2/(t0^2*u^8) + 1/(t0^4*u^6) + 1/(t0^5*u^5) + 1/(t0^6*u^4) + 1/(t0^2*u^9) + 1/(t0^3*u^8) + 1/(t0^4*u^7)$ 
+\item[Newton Polynomial (factored)] $(t0^10 + 7*t0^9*u + 22*t0^8*u^2 + 43*t0^7*u^3 + 56*t0^6*u^4 + 63*t0^5*u^5 + 57*t0^4*u^6 + 41*t0^3*u^7 + 21*t0^2*u^8 + 7*t0*u^9 + u^10 + t0^7*u^2 + 2*t0^6*u^2 + t0^4*u^4 + t0^3*u^5 + t0^2*u^6 + t0^6*u + t0^5*u^2 + t0^4*u^3)/(t0^8*u^10)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-9<UGrading<0$   \\ 
+ & $-10<VGrading<0$   \\ 
+ & $-8<AGrading<0$   \\ 
+ & $-8<AGrading0<0$   \\ 
+& \\ 
+$GFC^-$   \\ 
+Number of Generators & 44 \\ 
+Number of Edges & 193 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $1/t0^8 + 3/u^8 + 14/(t0^3*u^5) + 1/(t0^5*u^3) + 13/(t0^6*u^2) + 5/(t0^7*u) + 1/(t0*u^8) + 2/(t0^2*u^8) + 1/(t0^4*u^6) + 1/(t0^5*u^5) + 1/(t0^6*u^4) + 1/(t0^2*u^9)$ 
+\item[Newton Polynomial (factored)] $(3*t0^8*u + 14*t0^5*u^4 + t0^3*u^6 + 13*t0^2*u^7 + 5*t0*u^8 + u^9 + t0^7*u + 2*t0^6*u + t0^4*u^3 + t0^3*u^4 + t0^2*u^5 + t0^6)/(t0^8*u^9)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-9<UGrading<0$   \\ 
+ & $-10<VGrading<0$   \\ 
+ & $-8<AGrading<0$   \\ 
+ & $-8<AGrading0<0$   \\ 
+& \\ 
+\end{longtable}

@@ -1,6 +1,4 @@
 from CodeModules.cinfprocessing import *
-import GFKTools as gfk
-
 import sys
 
 index = int(sys.argv[1])

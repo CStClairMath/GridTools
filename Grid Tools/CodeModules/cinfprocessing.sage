@@ -7,17 +7,19 @@ from scipy import sparse
 import matplotlib.pyplot as plt
 import multiprocessing as mp
 #from sage.graphs.graph_decompositions.graph_products import is_cartesian_product
-import CodeModules.GFKTools as gfk
-from CodeModules.GridPermutations import *
+import GFKTools as gfk
+from GridPermutations import *
 import time
 import pickle
-import CodeModules.perm as pr
+import perm as pr
 from multiprocessing.managers import BaseManager
 import random as rd
 
+full_dict = {**knot_dict, **link_dict}
 
 TIMERS = True
-PROCESSOR_COUNT = 12
+PROCESSOR_COUNT = mp.cpu_count()
+PARALLEL_CUTOFF = 400
 OUTPUTDIRECTORY = 'Outputs/'
 PRINT_PROGRESS = True
 
@@ -233,20 +235,7 @@ class grid_complex:
         return
 
 
-    def split_by_grading(self, partition_list, key):
 
-        # Unnecessary in current version - different approach to parallelization
-        # partition_list is expected to be of the form matching the partition function's output.
-
-        result = []
-        
-        for data in partition_list:
-            gens = [vert for vert in self.comp.nodes() if ((self.comp.nodes()[vert][key] >= data[0]) and (self.comp.nodes()[vert][key] <= data[4])) ]
-            subg = self.comp.subgraph(gens)
-            result.append(subg)
-            
-        return result
-    
     
     def graph_red_search(self, started = False, timerstart = None): 
 
@@ -358,6 +347,10 @@ class grid_complex:
         else:
             
             gridX = self.sigx
+            cycle = pr.full_cycle(self.size)
+            gridX = pr.perm(gridX)
+            gridX = cycle*gridX
+            gridX = gridX.value
 
         if self.sigo == None:
 
@@ -366,23 +359,27 @@ class grid_complex:
         else:
             
             gridO = self.sigo
+            cycle = pr.full_cycle(self.size)
+            gridO = pr.perm(gridO)
+            gridO = cycle*gridO
+            gridO = gridO.value
             
         gens = self.ring.gens()
         size = len(gens)/2 
 
         print("grading complex...")
 
-        comp_set = len(self.components)
+        comp_count = len(self.components)
 
         # Adding an attribute to all nodes to keep track of if they've been assigned gradings
-        for i in range(comp_set):
+        for i in range(comp_count):
             nx.set_node_attributes(self.comp, False, f"HasBeenGraded{i}")
 
         # The gradings are relative so we're declaring one to be in U, V, and Alexander grading 0
         # this block initializes those balues
-        for i in range(comp_set):
+        # for i in range(comp_count):
 #             self.comp.nodes()[str(gridX)][f'HasBeenGraded{i}'] = True
-            self.comp.nodes()[str(gridX)][f'AGrading{i}'] = 0
+            # self.comp.nodes()[str(gridX)][f'AGrading{i}'] = 0
 #             self.comp.nodes()[str(gridX)][f'UGrading{i}'] = 0
 #             self.comp.nodes()[str(gridX)][f'VGrading{i}'] = 0
 
@@ -415,16 +412,13 @@ class grid_complex:
         # on deck on the following loop
         #
         # On deck holds the edges to be iterated through
-        on_deck = [str(gridX)]
+        # on_deck = [str(gridX)]
 
         # In the hole holds the ones to be iterated through once on_deck is cleared
-        in_the_hole = []
+        # in_the_hole = []
 
         if TIMERS: timerstart = time.time()
 
-            
-        comp_count = len(self.components)
-            
         # Grading Loops Start:
         ####################
         
@@ -621,27 +615,28 @@ class grid_complex:
                 #
                 # The loop is broken into two halves since we have two flavors of neighbor in a directed graph, successors and
                 # predecessors, named accordingly. These flavors differ in relative grading change by a sign.
-                for i, component_columns in enumerate(self.components):
-                    for succ in span.successors(vert): 
 
-                        #skip the vertex if its already been graded
-                        if self.comp.nodes()[succ]['HasBeenGraded']: continue
-                        
-                        in_the_hole.append(succ)
-                        
-                        fn1(succ, vert)
+                # for i, component_columns in enumerate(self.components):
+                for succ in span.successors(vert): 
 
-                        self.comp.nodes()[succ]['HasBeenGraded'] = True
+                    #skip the vertex if its already been graded
+                    if self.comp.nodes()[succ]['HasBeenGraded']: continue
+                    
+                    in_the_hole.append(succ)
+                    
+                    fn1(succ, vert)
 
-                    for pred in span.predecessors(vert):
+                    self.comp.nodes()[succ]['HasBeenGraded'] = True
 
-                        if self.comp.nodes()[pred]['HasBeenGraded']: continue
-                        
-                        in_the_hole.append(pred)
-                        
-                        fn2(pred, vert)
+                for pred in span.predecessors(vert):
 
-                        self.comp.nodes()[pred][f'HasBeenGraded'] = True
+                    if self.comp.nodes()[pred]['HasBeenGraded']: continue
+                    
+                    in_the_hole.append(pred)
+                    
+                    fn2(pred, vert)
+
+                    self.comp.nodes()[pred][f'HasBeenGraded'] = True
                         
             on_deck = in_the_hole
             in_the_hole = []
@@ -814,41 +809,7 @@ class grid_complex:
     
         return
     
-    def parallel_graph_single_split(self, key, split_count, split_blocks = None):
-        
-        # Deprecated by ego split 
 
-        # WARNING: !!!split count should be passed at most one lower than the actual number of cores available, this is because of 
-        # ceilings being a part of the function - it means it can return a set with more blocks than the given split count!!! 
-  
-        self.find_max_difference(key)
-        
-        max_step = self.max_grading_changes[key]
-
-        self.find_grading_ranges(key)
-        
-        if split_blocks == None:
-            
-            split_blocks = degree_partition(max_step, math.ceil(self.min_gradings[key]), math.ceil(self.max_gradings[key]), split_count)
-    
-        if split_blocks == None:
-            
-            return None
-        
-        result = []
-        
-        for split in split_blocks:
-            
-            current_subgraph = []
-            vertex_set = []
-            vertex_set = [vert for vert in self.comp.nodes() if ((self.comp.nodes()[vert][key] >= split[0]) and (self.comp.nodes()[vert][key] <= split[-1]))]
-            current_subgraph = self.comp.subgraph(vertex_set).copy()
-            result.append([current_subgraph, split])
-            
-        return result
-    
-    
-    
     
     def parallel_reduction_helper(self, subgraph_set, overwrite = True):
         
@@ -878,44 +839,9 @@ class grid_complex:
             
             return result
     
-    
-    def grading_parallel_graph_red_search(self, proc_count = 2, splitting_key = "AGrading"):
-        
-        # Deprecated by ego_parallel_red_search
-        
-        # graph_red_search with parallel processing by splitting into pieces based on splitting_key
 
 
-        key = splitting_key
-        
-        subgraph_set = self.parallel_graph_single_split(splitting_key, proc_count - 1)
-        
-        if subgraph_set == None:
-            
-            self.graph_red_search()
-            return
-        
-        step = parallel_active_range(self.max_grading_changes[key], math.ceil(self.min_gradings[key]), math.ceil(self.max_gradings[key]), proc_count)
-        
-        target_loop = math.ceil((1+self.max_gradings[key]-self.min_gradings[key])/step)
-        print(str(target_loop) + str(" target number of loops"))
-        
-        partition = subgraph_set[:][1]
-        
-        for i in range(target_loop):
-            
-            self.parallel_reduction_helper(subgraph_set)
-            
-            partition_block_iterator(partition, step)
-            
-            subgraph_set = self.parallel_graph_single_split(splitting_key, proc_count - 1, split_blocks = partition)
-#             iterate the split
-            
-        return
-
-    
-
-    def ego_parallel_red_search(self, cutoff = 100, proc_count = 2):
+    def ego_parallel_red_search(self, cutoff = PARALLEL_CUTOFF, proc_count = PROCESSOR_COUNT):
 
         # graph_red_search with parallel processing support by using networkx ego graph function
         # to split the graph
@@ -933,7 +859,7 @@ class grid_complex:
         return
     
     
-    def ego_parallel_sweep(self, start_vert = None, proc_count = 2):
+    def ego_parallel_sweep(self, start_vert = None, proc_count = PROCESSOR_COUNT):
 
         if start_vert == None:
             
@@ -1024,6 +950,21 @@ class grid_complex:
 
         return result
 
+    def pickle_edge_dict(self, filename):
+
+        edge_dict = dict(self.comp.edges())
+        gfk.pickle_it(edge_dict, filename)
+
+        return
+
+    def pickle_node_dict(self, filename):
+
+        node_dict = dict(self.comp.nodes())
+        gfk.pickle_it(node_dict, filename)
+
+        return
+
+
 
 def subgraph_red_search(subg, search_reg, result_list):
 
@@ -1040,7 +981,8 @@ def subgraph_red_search(subg, search_reg, result_list):
         
         if ed in subgraph.comp.edges():
 #             print("reducing an edge")
-            subgraph.graph_reduction(ed[0], ed[1])
+            if (subgraph.comp.edges()[ed]['diffweight'] == 1):
+                subgraph.graph_reduction(ed[0], ed[1])
         
     f_size = len(subgraph.comp.nodes())
     # print("reduced subgraph from size " + str(og_size) + " to " + str(f_size))
@@ -1271,8 +1213,8 @@ def link_GFC(sigx, sigo, filename = None):
 #     comp.parallel_graph_red_search(PROCESSOR_COUNT, split_key)
     print("completed parallel reducer function")
     comp.gml_export(filename)
-    picklefilename = "Pickles/" + filename + ".p"
-    gfk.pickle_it(comp, picklefilename)
+    # picklefilename = "Pickles/edges" + filename + ".p"
+    # comp.pickle_edge_dict(picklefilename)
 
     comp.link_normalize()
     
@@ -1280,8 +1222,8 @@ def link_GFC(sigx, sigo, filename = None):
     
     filename = "Normalized" + filename
     comp.gml_export(filename)
-    picklefilename = "Pickles/" +filename + ".p"
-    gfk.pickle_it(comp, picklefilename)
+    # picklefilename = "Pickles/edges" +filename + ".p"
+    # comp.pickle_edge_dict(picklefilename)
     
     for i in range(len(comp.components)):
         comp.find_grading_ranges(f'AGrading{i}')

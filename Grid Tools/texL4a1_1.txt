@@ -1,0 +1,36 @@
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}}$L4a1_1$   \\ \hline 
+$\sigma_X$   & $[3, 2, 6, 1, 5, 4]$ \\ 
+$\sigma_O$  & $[6, 5, 4, 3, 2, 1]$ \\ 
+$GFC^\infty$   \\ 
+Number of Generators & 128 \\ 
+Number of Edges & 1119 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $1/(t0^(11/2)*t1^(5/2)) + sqrt(t1)/(sqrt(t0)*u^8) + 2/(sqrt(t0)*sqrt(t1)*u^7) + 4*sqrt(t1)/(t0^(3/2)*u^7) + 1/(sqrt(t0)*t1^(3/2)*u^6) + 9/(t0^(3/2)*sqrt(t1)*u^6) + 6*sqrt(t1)/(t0^(5/2)*u^6) + 6/(t0^(3/2)*t1^(3/2)*u^5) + 16/(t0^(5/2)*sqrt(t1)*u^5) + 4*sqrt(t1)/(t0^(7/2)*u^5) + 1/(t0^(3/2)*t1^(5/2)*u^4) + 14/(t0^(5/2)*t1^(3/2)*u^4) + 14/(t0^(7/2)*sqrt(t1)*u^4) + sqrt(t1)/(t0^(9/2)*u^4) + 4/(t0^(5/2)*t1^(5/2)*u^3) + 16/(t0^(7/2)*t1^(3/2)*u^3) + 6/(t0^(9/2)*sqrt(t1)*u^3) + 6/(t0^(7/2)*t1^(5/2)*u^2) + 9/(t0^(9/2)*t1^(3/2)*u^2) + 1/(t0^(11/2)*sqrt(t1)*u^2) + 4/(t0^(9/2)*t1^(5/2)*u) + 2/(t0^(11/2)*t1^(3/2)*u)$ 
+\item[Newton Polynomial (factored)] $(t0*t1 + u^2)*(t0 + u)^4*(t1 + u)^2/(t0^(11/2)*t1^(5/2)*u^8)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-5<UGrading<0$   \\ 
+ & $-8<VGrading<0$   \\ 
+ & $-8<AGrading<0$   \\ 
+ & $-11/2<AGrading0<0$   \\ 
+ & $-5/2<AGrading1<0$   \\ 
+& \\ 
+$GFC^-$   \\ 
+Number of Generators & 28 \\ 
+Number of Edges & 134 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $1/(t0^(11/2)*t1^(5/2)) + 1/(t0^(5/2)*sqrt(t1)*u^5) + 2/(t0^(5/2)*t1^(3/2)*u^4) + 1/(t0^(5/2)*t1^(5/2)*u^3) + 4/(t0^(7/2)*t1^(3/2)*u^3) + 3/(t0^(9/2)*sqrt(t1)*u^3) + 3/(t0^(7/2)*t1^(5/2)*u^2) + 7/(t0^(9/2)*t1^(3/2)*u^2) + 1/(t0^(11/2)*sqrt(t1)*u^2) + 4/(t0^(9/2)*t1^(5/2)*u) + 1/(t0^(11/2)*t1^(3/2)*u)$ 
+\item[Newton Polynomial (factored)] $(t0^3*t1^2 + 2*t0^3*t1*u + t0^3*u^2 + 4*t0^2*t1*u^2 + 3*t0*t1^2*u^2 + 3*t0^2*u^3 + 7*t0*t1*u^3 + t1^2*u^3 + 4*t0*u^4 + t1*u^4 + u^5)/(t0^(11/2)*t1^(5/2)*u^5)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-5<UGrading<0$   \\ 
+ & $-8<VGrading<0$   \\ 
+ & $-8<AGrading<0$   \\ 
+ & $-11/2<AGrading0<0$   \\ 
+ & $-5/2<AGrading1<0$   \\ 
+& \\ 
+\end{longtable}

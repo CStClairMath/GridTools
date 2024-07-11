@@ -1,0 +1,36 @@
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}}$L2a1_0$   \\ \hline 
+$\sigma_X$   & $[4, 3, 2, 1]$ \\ 
+$\sigma_O$  & $[2, 1, 4, 3]$ \\ 
+$GFC^\infty$   \\ 
+Number of Generators & 16 \\ 
+Number of Edges & 56 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $1/(t0^(3/2)*t1^(3/2)) + sqrt(t0)*sqrt(t1)/u^4 + 2*sqrt(t0)/(sqrt(t1)*u^3) + 2*sqrt(t1)/(sqrt(t0)*u^3) + sqrt(t0)/(t1^(3/2)*u^2) + 4/(sqrt(t0)*sqrt(t1)*u^2) + sqrt(t1)/(t0^(3/2)*u^2) + 2/(sqrt(t0)*t1^(3/2)*u) + 2/(t0^(3/2)*sqrt(t1)*u)$ 
+\item[Newton Polynomial (factored)] $(t0 + u)^2*(t1 + u)^2/(t0^(3/2)*t1^(3/2)*u^4)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-3<UGrading<0$   \\ 
+ & $-4<VGrading<0$   \\ 
+ & $-3<AGrading<0$   \\ 
+ & $-3/2<AGrading0<1/2$   \\ 
+ & $-3/2<AGrading1<1/2$   \\ 
+& \\ 
+$GFC^-$   \\ 
+Number of Generators & 8 \\ 
+Number of Edges & 15 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $1/(t0^(3/2)*t1^(3/2)) + sqrt(t0)/(sqrt(t1)*u^3) + sqrt(t0)/(t1^(3/2)*u^2) + 1/(sqrt(t0)*sqrt(t1)*u^2) + sqrt(t1)/(t0^(3/2)*u^2) + 1/(sqrt(t0)*t1^(3/2)*u) + 2/(t0^(3/2)*sqrt(t1)*u)$ 
+\item[Newton Polynomial (factored)] $(t0^2 + t0*u + t1*u + u^2)*(t1 + u)/(t0^(3/2)*t1^(3/2)*u^3)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-3<UGrading<0$   \\ 
+ & $-4<VGrading<0$   \\ 
+ & $-3<AGrading<0$   \\ 
+ & $-3/2<AGrading0<1/2$   \\ 
+ & $-3/2<AGrading1<1/2$   \\ 
+& \\ 
+\end{longtable}

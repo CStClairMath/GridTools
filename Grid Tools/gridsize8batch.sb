@@ -2,7 +2,7 @@
 
 #SBATCH --time=32:00:00
 #SBATCH --cpus-per-task=12
-#SBATCH --mem-per-cpu=16G
+#SBATCH --mem-per-cpu=32G
 #SBATCH --job-name grid_size_8_batch
 #SBATCH -o gs8b-%A_%a.out
 

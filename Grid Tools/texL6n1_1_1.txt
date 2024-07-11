@@ -1,0 +1,38 @@
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}}$L6n1_1_1$   \\ \hline 
+$\sigma_X$   & $[2, 6, 1, 5, 3, 4]$ \\ 
+$\sigma_O$  & $[5, 3, 4, 2, 6, 1]$ \\ 
+$GFC^\infty$   \\ 
+Number of Generators & 142 \\ 
+Number of Edges & 1139 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $2/(t1^3*t2^2) + 2/(t0*t1^2*t2^2) + 2/(t0*t1^3*t2) + 1/(t0^2*t1^2*t2) + t2/u^6 + t0/(t1*u^5) + 2*t2/(t0*u^5) + 2*t2/(t1*u^5) + 2/u^5 + 4/(t0*u^4) + 2*t0/(t1^2*u^4) + 7/(t1*u^4) + 2*t0/(t1*t2*u^4) + 1/(t2*u^4) + t2/(t0^2*u^4) + t2/(t1^2*u^4) + 4*t2/(t0*t1*u^4) + 2/(t0^2*u^3) + t0/(t1^3*u^3) + 7/(t1^2*u^3) + 9/(t0*t1*u^3) + t0/(t1*t2^2*u^3) + 2/(t0*t2*u^3) + 4*t0/(t1^2*t2*u^3) + 7/(t1*t2*u^3) + 2*t2/(t0*t1^2*u^3) + 2*t2/(t0^2*t1*u^3) + 2/(t1^3*u^2) + 7/(t0*t1^2*u^2) + 4/(t0^2*t1*u^2) + 2*t0/(t1^2*t2^2*u^2) + 2/(t1*t2^2*u^2) + 1/(t0^2*t2*u^2) + 2*t0/(t1^3*t2*u^2) + 10/(t1^2*t2*u^2) + 7/(t0*t1*t2*u^2) + t2/(t0^2*t1^2*u^2) + 1/(t0*t1^3*u) + 2/(t0^2*t1^2*u) + t0/(t1^3*t2^2*u) + 4/(t1^2*t2^2*u) + 1/(t0*t1*t2^2*u) + 4/(t1^3*t2*u) + 7/(t0*t1^2*t2*u) + 2/(t0^2*t1*t2*u) + u/(t0*t1^3*t2^2) + 1/(t1*u^5) + 1/(t1^2*u^4) + 1/(t1*t2*u^4) + 1/(t0*t1^2*u^3) + 1/(t1^2*t2*u^3) + 1/(t0*t1*t2*u^3) + 1/(t0*t1^2*t2*u^2)$ 
+\item[Newton Polynomial (factored)] $(t0^2*t1^3*t2^3 + t0^3*t1^2*t2^2*u + 2*t0^2*t1^3*t2^2*u + 2*t0^2*t1^2*t2^3*u + 2*t0*t1^3*t2^3*u + 2*t0^3*t1^2*t2*u^2 + t0^2*t1^3*t2*u^2 + 2*t0^3*t1*t2^2*u^2 + 7*t0^2*t1^2*t2^2*u^2 + 4*t0*t1^3*t2^2*u^2 + t0^2*t1*t2^3*u^2 + 4*t0*t1^2*t2^3*u^2 + t1^3*t2^3*u^2 + t0^3*t1^2*u^3 + 4*t0^3*t1*t2*u^3 + 7*t0^2*t1^2*t2*u^3 + 2*t0*t1^3*t2*u^3 + t0^3*t2^2*u^3 + 7*t0^2*t1*t2^2*u^3 + 9*t0*t1^2*t2^2*u^3 + 2*t1^3*t2^2*u^3 + 2*t0*t1*t2^3*u^3 + 2*t1^2*t2^3*u^3 + 2*t0^3*t1*u^4 + 2*t0^2*t1^2*u^4 + 2*t0^3*t2*u^4 + 10*t0^2*t1*t2*u^4 + 7*t0*t1^2*t2*u^4 + t1^3*t2*u^4 + 2*t0^2*t2^2*u^4 + 7*t0*t1*t2^2*u^4 + 4*t1^2*t2^2*u^4 + t1*t2^3*u^4 + t0^3*u^5 + 4*t0^2*t1*u^5 + t0*t1^2*u^5 + 4*t0^2*t2*u^5 + 7*t0*t1*t2*u^5 + 2*t1^2*t2*u^5 + t0*t2^2*u^5 + 2*t1*t2^2*u^5 + 2*t0^2*u^6 + 2*t0*t1*u^6 + 2*t0*t2*u^6 + t1*t2*u^6 + t0*u^7 + t0^2*t1^2*t2^2*u + t0^2*t1^2*t2*u^2 + t0^2*t1*t2^2*u^2 + t0^2*t1*t2*u^3 + t0*t1^2*t2*u^3 + t0*t1*t2^2*u^3 + t0*t1*t2*u^4)/(t0^2*t1^3*t2^2*u^6)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-5<UGrading<1$   \\ 
+ & $-6<VGrading<0$   \\ 
+ & $-6<AGrading<0$   \\ 
+ & $-2<AGrading0<1$   \\ 
+ & $-3<AGrading1<0$   \\ 
+ & $-2<AGrading2<1$   \\ 
+& \\ 
+$GFC^-$   \\ 
+Number of Generators & 36 \\ 
+Number of Edges & 91 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $2/(t1^3*t2^2) + 1/(t0*t1^3*t2) + 1/(t0*u^4) + 1/(t1*u^4) + t0/(t1*t2*u^4) + t2/(t0*t1*u^4) + 2/(t0^2*u^3) + 1/(t0*t1*u^3) + 2*t2/(t0^2*t1*u^3) + 3/(t0*t1^2*u^2) + 1/(t0^2*t2*u^2) + t0/(t1^3*t2*u^2) + 1/(t1^2*t2*u^2) + 1/(t0*t1*t2*u^2) + t2/(t0^2*t1^2*u^2) + 2/(t0^2*t1^2*u) + 2/(t1^2*t2^2*u) + 3/(t1^3*t2*u) + 1/(t0^2*t1*t2*u) + u/(t0*t1^3*t2^2) + 1/(t1*u^5) + 1/(t1^2*u^4) + 1/(t1*t2*u^4) + 1/(t0*t1^2*u^3) + 1/(t1^2*t2*u^3) + 1/(t0*t1*t2*u^3) + 1/(t0*t1^2*t2*u^2)$ 
+\item[Newton Polynomial (factored)] $(t0^3*t1^2*t2*u + t0^2*t1^2*t2^2*u + t0*t1^3*t2^2*u + t0*t1^2*t2^3*u + t0*t1^2*t2^2*u^2 + 2*t1^3*t2^2*u^2 + 2*t1^2*t2^3*u^2 + t0^3*t2*u^3 + t0^2*t1*t2*u^3 + t0*t1^2*t2*u^3 + t1^3*t2*u^3 + 3*t0*t1*t2^2*u^3 + t1*t2^3*u^3 + 2*t0^2*t1*u^4 + 3*t0^2*t2*u^4 + t1^2*t2*u^4 + 2*t1*t2^2*u^4 + 2*t0^2*u^5 + t0*t2*u^5 + t0*u^6 + t0^2*t1^2*t2^2 + t0^2*t1^2*t2*u + t0^2*t1*t2^2*u + t0^2*t1*t2*u^2 + t0*t1^2*t2*u^2 + t0*t1*t2^2*u^2 + t0*t1*t2*u^3)/(t0^2*t1^3*t2^2*u^5)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-5<UGrading<1$   \\ 
+ & $-6<VGrading<0$   \\ 
+ & $-6<AGrading<0$   \\ 
+ & $-2<AGrading0<1$   \\ 
+ & $-3<AGrading1<0$   \\ 
+ & $-2<AGrading2<1$   \\ 
+& \\ 
+\end{longtable}
