@@ -1,0 +1,34 @@
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}}$k6_1$   \\ \hline 
+$\sigma_X$   & $[8, 1, 6, 7, 4, 5, 3, 2]$ \\ 
+$\sigma_O$  & $[3, 7, 8, 5, 6, 2, 1, 4]$ \\ 
+$GFC^\infty$   \\ 
+Number of Generators & 3910 \\ 
+Number of Edges & 2282 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $1/(t0^2*u) + 1/(t0*u^3) + 10/(t0^3*u) + 1/u^5 + 67/(t0^2*u^3) + 29/(t0^4*u) + 135/(t0*u^5) + 460/(t0^3*u^3) + 82/(t0^5*u) + u/t0^7 + 55/u^7 + 8/(t0*u^6) + 857/(t0^2*u^5) + 16/(t0^3*u^4) + 694/(t0^4*u^3) + 6/(t0^5*u^2) + 63/(t0^6*u) + 118/(t0*u^7) + 601/(t0^3*u^5) + 93/(t0^5*u^3) + 184/(t0^2*u^7) + 139/(t0^4*u^5) + 5/(t0*u^9) + 108/(t0^3*u^7) + 2/(t0^5*u^5) + 112/(t0^2*u^9) + 7/(t0^4*u^7) + 3/(t0*u^11) + 24/(t0^3*u^9) + 27/(t0^2*u^11) + 1/(t0^4*u^9)$ 
+\item[Newton Polynomial (factored)] $(t0^5*u^10 + t0^6*u^8 + 10*t0^4*u^10 + t0^7*u^6 + 67*t0^5*u^8 + 29*t0^3*u^10 + 135*t0^6*u^6 + 460*t0^4*u^8 + 82*t0^2*u^10 + u^12 + 55*t0^7*u^4 + 8*t0^6*u^5 + 857*t0^5*u^6 + 16*t0^4*u^7 + 694*t0^3*u^8 + 6*t0^2*u^9 + 63*t0*u^10 + 118*t0^6*u^4 + 601*t0^4*u^6 + 93*t0^2*u^8 + 184*t0^5*u^4 + 139*t0^3*u^6 + 5*t0^6*u^2 + 108*t0^4*u^4 + 2*t0^2*u^6 + 112*t0^5*u^2 + 7*t0^3*u^4 + 3*t0^6 + 24*t0^4*u^2 + 27*t0^5 + t0^3*u^2)/(t0^7*u^11)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-11<UGrading<1$   \\ 
+ & $-10<VGrading<2$   \\ 
+ & $-7<AGrading<0$   \\ 
+ & $-7<AGrading0<0$   \\ 
+& \\ 
+$GFC^-$   \\ 
+Number of Generators & 3850 \\ 
+Number of Edges & 0 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $1/(t0^2*u) + 1/(t0*u^3) + 10/(t0^3*u) + 1/u^5 + 67/(t0^2*u^3) + 29/(t0^4*u) + 135/(t0*u^5) + 460/(t0^3*u^3) + 82/(t0^5*u) + u/t0^7 + 55/u^7 + 846/(t0^2*u^5) + 677/(t0^4*u^3) + 61/(t0^6*u) + 118/(t0*u^7) + 601/(t0^3*u^5) + 93/(t0^5*u^3) + 184/(t0^2*u^7) + 139/(t0^4*u^5) + 5/(t0*u^9) + 108/(t0^3*u^7) + 2/(t0^5*u^5) + 112/(t0^2*u^9) + 7/(t0^4*u^7) + 3/(t0*u^11) + 24/(t0^3*u^9) + 27/(t0^2*u^11) + 1/(t0^4*u^9)$ 
+\item[Newton Polynomial (factored)] $(t0^5*u^10 + t0^6*u^8 + 10*t0^4*u^10 + t0^7*u^6 + 67*t0^5*u^8 + 29*t0^3*u^10 + 135*t0^6*u^6 + 460*t0^4*u^8 + 82*t0^2*u^10 + u^12 + 55*t0^7*u^4 + 846*t0^5*u^6 + 677*t0^3*u^8 + 61*t0*u^10 + 118*t0^6*u^4 + 601*t0^4*u^6 + 93*t0^2*u^8 + 184*t0^5*u^4 + 139*t0^3*u^6 + 5*t0^6*u^2 + 108*t0^4*u^4 + 2*t0^2*u^6 + 112*t0^5*u^2 + 7*t0^3*u^4 + 3*t0^6 + 24*t0^4*u^2 + 27*t0^5 + t0^3*u^2)/(t0^7*u^11)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-11<UGrading<1$   \\ 
+ & $-10<VGrading<2$   \\ 
+ & $-7<AGrading<0$   \\ 
+ & $-7<AGrading0<0$   \\ 
+& \\ 
+\end{longtable}

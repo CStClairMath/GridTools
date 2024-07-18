@@ -1,0 +1,36 @@
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}}$L7n2_1$   \\ \hline 
+$\sigma_X$   & $[3, 5, 1, 6, 7, 2, 4]$ \\ 
+$\sigma_O$  & $[7, 2, 4, 3, 5, 6, 1]$ \\ 
+$GFC^\infty$   \\ 
+Number of Generators & 512 \\ 
+Number of Edges & 9731 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $3*t0/t1^(13/2) + 11/t1^(11/2) + 19/(t0*t1^(9/2)) + 3/(t0^2*t1^(7/2)) + t0^2/(sqrt(t1)*u^7) + 2*t0^2/(t1^(3/2)*u^6) + 5*t0/(sqrt(t1)*u^6) + 2*sqrt(t1)/u^6 + 8*t0^2/(t1^(5/2)*u^5) + 19*t0/(t1^(3/2)*u^5) + 6/(sqrt(t1)*u^5) + 3*sqrt(t1)/(t0*u^5) + 10*t0^2/(t1^(7/2)*u^4) + 36*t0/(t1^(5/2)*u^4) + 33/(t1^(3/2)*u^4) + 5/(t0*sqrt(t1)*u^4) + 7*t0^2/(t1^(9/2)*u^3) + 43*t0/(t1^(7/2)*u^3) + 61/(t1^(5/2)*u^3) + 13/(t0*t1^(3/2)*u^3) + 2/(t0^2*sqrt(t1)*u^3) + t0^2/(t1^(11/2)*u^2) + 33*t0/(t1^(9/2)*u^2) + 63/(t1^(7/2)*u^2) + 29/(t0*t1^(5/2)*u^2) + t0^2/(t1^(13/2)*u) + 10*t0/(t1^(11/2)*u) + 35/(t1^(9/2)*u) + 36/(t0*t1^(7/2)*u) + 2/(t0^2*t1^(5/2)*u) + 3*u/t1^(13/2) + 5*u/(t0*t1^(11/2)) + u/(t0^2*t1^(9/2)) + u^2/(t0*t1^(13/2))$ 
+\item[Newton Polynomial (factored)] $(t0^4*t1^6 + 2*t0^4*t1^5*u + 5*t0^3*t1^6*u + 2*t0^2*t1^7*u + 8*t0^4*t1^4*u^2 + 19*t0^3*t1^5*u^2 + 6*t0^2*t1^6*u^2 + 3*t0*t1^7*u^2 + 10*t0^4*t1^3*u^3 + 36*t0^3*t1^4*u^3 + 33*t0^2*t1^5*u^3 + 5*t0*t1^6*u^3 + 7*t0^4*t1^2*u^4 + 43*t0^3*t1^3*u^4 + 61*t0^2*t1^4*u^4 + 13*t0*t1^5*u^4 + 2*t1^6*u^4 + t0^4*t1*u^5 + 33*t0^3*t1^2*u^5 + 63*t0^2*t1^3*u^5 + 29*t0*t1^4*u^5 + t0^4*u^6 + 10*t0^3*t1*u^6 + 35*t0^2*t1^2*u^6 + 36*t0*t1^3*u^6 + 2*t1^4*u^6 + 3*t0^3*u^7 + 11*t0^2*t1*u^7 + 19*t0*t1^2*u^7 + 3*t1^3*u^7 + 3*t0^2*u^8 + 5*t0*t1*u^8 + t1^2*u^8 + t0*u^9)/(t0^2*t1^(13/2)*u^7)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-6<UGrading<1$   \\ 
+ & $-6<VGrading<1$   \\ 
+ & $-13/2<AGrading<1/2$   \\ 
+ & $-2<AGrading0<2$   \\ 
+ & $-13/2<AGrading1<1/2$   \\ 
+& \\ 
+$GFC^-$   \\ 
+Number of Generators & 30 \\ 
+Number of Edges & 0 \\ 
+\end{longtable} 
+\begin{description} 
+\item[Newton Polynomial]   $sqrt(t1)/u^6 + 2*t0^2/(t1^(5/2)*u^5) + t0/(t1^(3/2)*u^5) + 2/(sqrt(t1)*u^5) + 2*sqrt(t1)/(t0*u^5) + t0^2/(t1^(7/2)*u^4) + 7*t0/(t1^(5/2)*u^4) + 5/(t1^(3/2)*u^4) + 1/(t0*sqrt(t1)*u^4) + t0/(t1^(7/2)*u^3) + 1/(t1^(5/2)*u^3) + 1/(t0*t1^(3/2)*u^3) + 1/(t1^(9/2)*u) + 2/(t0*t1^(7/2)*u) + 1/(t0^2*t1^(5/2)*u) + u/t1^(13/2)$ 
+\item[Newton Polynomial (factored)] $(t0^2*t1^7 + 2*t0^4*t1^4*u + t0^3*t1^5*u + 2*t0^2*t1^6*u + 2*t0*t1^7*u + t0^4*t1^3*u^2 + 7*t0^3*t1^4*u^2 + 5*t0^2*t1^5*u^2 + t0*t1^6*u^2 + t0^3*t1^3*u^3 + t0^2*t1^4*u^3 + t0*t1^5*u^3 + t0^2*t1^2*u^5 + 2*t0*t1^3*u^5 + t1^4*u^5 + t0^2*u^7)/(t0^2*t1^(13/2)*u^6)$ 
+\end{description} 
+\begin{longtable}{p{.25\textwidth} p{.75\textwidth}} 
+Grading Ranges   &  \\ 
+ & $-6<UGrading<1$   \\ 
+ & $-6<VGrading<1$   \\ 
+ & $-13/2<AGrading<1/2$   \\ 
+ & $-2<AGrading0<2$   \\ 
+ & $-13/2<AGrading1<1/2$   \\ 
+& \\ 
+\end{longtable}
