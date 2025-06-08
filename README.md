@@ -4,4 +4,4 @@ The collection of programs here are in support of my dissertation, A Program to 
 
 The functionality has been exported from the Sage code to a Python file, but the workflow in practice is to run the Sage code in a Jupyter notebook.
 
-**Warning!!** This code works and is confirmed for Sagemath 10.2, the final version supporting Windows was 9.3 and has a bug in some supporting functions that causes erroneous results. As such it should *not* be used.
+**Warning!!** This code works and is confirmed for Sagemath 10.2. The final version of Sage supporting Windows was 9.3 and has a bug in some supporting functions that causes erroneous results. As such it should *not* be used. To run on Windows the Windows subsystem for Linux (WSL) should be used instead.
